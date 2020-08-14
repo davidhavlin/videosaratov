@@ -1,44 +1,48 @@
 <template>
 	<aside class="content">
 		<!-- obrazok KOCKA  -->
-		<div class="content-img-1"
-			 ref="vrimage"
-			 data-lax-translate-y="-1000 0, 1000 -150"
-			 data-lax-rotate="-1000 -20, vh 0"
-			 data-lax-anchor="self">
-			<img src="@/assets/img/vrvr.jpg"
-				 alt />
+		<div
+			class="content-img-1"
+			ref="vrimage"
+			data-lax-translate-y_large="-1000 0, 1000 -150"
+			data-lax-translate-y_medium="-300 -93, 1000 -150"
+			data-lax-translate-y_small="-300 -93, 1000 -150"
+			data-lax-translate-y_ultrasmall="-300 -93, 1000 -150"
+			data-lax-rotate="-1000 -20, vh 0"
+			data-lax-anchor="self"
+		>
+			<img src="@/assets/img/vrvr.jpg" alt />
 		</div>
 
 		<!-- HORNA SEKCIA s obrazkom a popisom -->
-		<section ref="section_1"
-				 class="content-title-1 animate__animated">
+		<section ref="section_1" class="content-title-1 animate__animated">
 			<h1 id="htc-vive">HTC Vive</h1>
 			<p>
 				Súprava HTC Vive obsahuje Headset a 2 ovládače. Ponúka najväčšiu
 				ponuku hier a zážitkov oproti iným systémom.
 			</p>
-			<a class="btn btn-home"
-			   href="#">Zistiť viac</a>
+			<a class="btn btn-home" href="#">Zistiť viac</a>
 		</section>
 		<!-- **************************** -->
 
 		<!-- obrazok OVLADACE      -->
-		<div class="content-img-2"
-			 ref="controllers"
-			 data-lax-translate-y_large="-1000 180, 1000 -150"
-			 data-lax-translate-y_small="-1000 220, 1000 80"
-			 data-lax-rotate_large="-1000 -25, 600 0"
-			 data-lax-rotate_small="-1000 30, 600 0"
-			 data-lax-opacity="-500 0, -400 1"
-			 data-lax-anchor="self">
-			<img src="@/assets/img/ovladace.png"
-				 alt />
+		<div
+			class="content-img-2"
+			ref="controllers"
+			data-lax-translate-y_large="-1000 180, 1000 -150"
+			data-lax-translate-y_medium="-1000 220, 1000 80"
+			data-lax-translate-y_small="-1000 220, 1000 -40"
+			data-lax-rotate_large="-1000 -25, 600 0"
+			data-lax-rotate_medium="-1000 30, 600 0"
+			data-lax-rotate_small="-1000 62, 600 40"
+			data-lax-opacity="-500 0, -400 1"
+			data-lax-anchor="self"
+		>
+			<img src="@/assets/img/ovladace.png" alt />
 		</div>
 
 		<!-- SEKCIA HEADSET -->
-		<section class="content-title-2 animate__animated"
-				 ref="section_2">
+		<section class="content-title-2 animate__animated" ref="section_2">
 			<h1>Headset</h1>
 			<p>
 				Pri hre sa pohybujete v priestore cca 3 x 3 m, na hlave máte
@@ -50,19 +54,20 @@
 		<!-- ************* -->
 
 		<!-- obrazok HEADSET -->
-		<div class="content-img-3"
-			 ref="vive"
-			 data-lax-translate-y_large="-1000 300, 1000 -100"
-			 data-lax-translate-y_small="-1000 -26, 1000 -100"
-			 data-lax-rotate="-1000 20, 1000 0"
-			 data-lax-anchor="self">
-			<img src="@/assets/img/htc.png"
-				 alt />
+		<div
+			class="content-img-3"
+			ref="vive"
+			data-lax-translate-y_large="-1000 300, 1000 -100"
+			data-lax-translate-y_medium="-1000 -26, 1000 -100"
+			data-lax-translate-y_small="-500 -6, 1000 -80"
+			data-lax-rotate="-1000 20, 1000 0"
+			data-lax-anchor="self"
+		>
+			<img src="@/assets/img/htc.png" alt />
 		</div>
 
 		<!-- SEKCIA CONTROLLERS -->
-		<section class="content-title-3 animate__animated"
-				 ref="section_3">
+		<section class="content-title-3 animate__animated" ref="section_3">
 			<h1>Controllers</h1>
 			<p>
 				Hrá 1 hráč a jeho priatelia môžu sledovať hru na TV obrazovke.
@@ -76,8 +81,7 @@
 		<!-- ************************ -->
 
 		<!-- POSLEDNA SEKCIA -->
-		<section class="content-title-4 animate__animated"
-				 ref="section_4">
+		<section class="content-title-4 animate__animated" ref="section_4">
 			<h1>Info</h1>
 			<p>
 				Použitie VR môže pre niekoho znamenať psychickú záťaž.
@@ -90,21 +94,25 @@
 		</section>
 		<!-- ******************* -->
 
-		<div class="content-img-4 lax"
-			 ref="popcorn"
-			 data-lax-translate-y_large="-1000 80, 1000 -100"
-			 data-lax-translate-y_small="-300 80, 1200 -100"
-			 data-lax-rotate_large="-1000 -10, 1000 -5"
-			 data-lax-rotate_small="-1000 13, 1000 -5"
-			 data-lax-anchor="self">
-			<img src="@/assets/img/vr.jpg"
-				 alt />
+		<div
+			class="content-img-4 lax"
+			ref="popcorn"
+			data-lax-translate-y_large="-1000 80, 1000 -100"
+			data-lax-translate-y_medium="-300 80, 1200 -100"
+			data-lax-translate-y_small="-300 80, 1200 -25"
+			data-lax-translate-y_ultrasmall="-300 40, 1200 -60"
+			data-lax-rotate_large="-1000 -10, 1000 -5"
+			data-lax-rotate_medium="-1000 13, 1000 -5"
+			data-lax-rotate_small="-1000 13, 1000 -5"
+			data-lax-rotate_ultrasmall="-1000 13, 1000 -5"
+			data-lax-anchor="self"
+		>
+			<img src="@/assets/img/vr.jpg" alt />
 		</div>
 	</aside>
 </template>
 
 <script>
-// import lax from 'lax.js'
 import ScrollOut from 'scroll-out'
 // import { throttle } from 'lodash-es'
 
@@ -191,11 +199,12 @@ export default {
 	width: 50%;
 	right: -60px;
 	top: 350px;
+	z-index: 1;
 }
 .content-img-4 {
 	border-radius: 1em;
 	overflow: hidden;
-	box-shadow: -5px 5px 0px 0px #4046c9, -11px 11px 22px 0px #4046c940;
+	box-shadow: -5px 5px 0px 0px #2448fa, -11px 11px 22px 0px #4046c940;
 	transform: rotate(-5deg) translateX(30px);
 	grid-area: img4;
 	position: relative;
@@ -230,7 +239,7 @@ export default {
 		margin-left: -6em;
 		border-radius: 1em;
 		overflow: hidden;
-		box-shadow: -5px 5px 0px 0px #ca1792, -11px 11px 22px 0px #ca17923b;
+		box-shadow: -5px 5px 0px 0px #f4126a, -11px 11px 22px 0px #ca17923b;
 		transform: rotate(5deg);
 	}
 
@@ -248,7 +257,7 @@ section {
 	z-index: 1;
 
 	h1 {
-		color: #ca1792;
+		color: #fc1269;
 		margin: 0;
 		font-size: 2em;
 	}
@@ -339,6 +348,61 @@ section {
 	}
 }
 
-@media (max-width: 730px) {
+@media (max-width: 720px) {
+	section .content-title-1 {
+		margin-top: 15rem;
+		align-self: center;
+	}
+	section {
+		margin-bottom: 4rem;
+	}
+
+	.content-title-2 {
+		align-self: center;
+	}
+	.content-title-3 {
+		align-self: center;
+	}
+	.content-title-4 {
+		align-self: center;
+		margin-bottom: 15rem;
+	}
+
+	.content .content-img-1 {
+		left: 27%;
+	}
+	.content-img-2 {
+		left: -226px;
+	}
+	.content-img-3 {
+		right: -70px;
+	}
+
+	.content-img-4 {
+		right: 4rem;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 560px) {
+	section {
+		margin-bottom: 2rem;
+	}
+	.content-img-2 {
+		display: none;
+	}
+	.content-img-3 {
+		display: none;
+	}
+}
+
+@media (max-width: 430px) {
+	.content .content-img-1 {
+		left: 2rem;
+	}
+	.content-img-4 {
+		right: 0rem;
+		margin: 0 1rem;
+	}
 }
 </style>
