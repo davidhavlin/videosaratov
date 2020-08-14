@@ -1,12 +1,13 @@
 <template>
-	<transition
-		name="elevator"
-		enter-active-class="animate__animated animate__bounceIn"
-		leave-active-class="animate__animated animate__bounceOut"
-	>
-		<div class="elevator" v-show="showElevator" @click="jumpTo()">
+	<transition name="elevator"
+				enter-active-class="animate__animated animate__bounceIn"
+				leave-active-class="animate__animated animate__bounceOut">
+		<div class="elevator"
+			 v-show="showElevator"
+			 @click="jumpTo()">
 			<div class="fill"></div>
-			<i class="fas fa-chevron-circle-up"></i>
+			<i style="display: block"
+			   class="fas fa-chevron-circle-up"></i>
 		</div>
 	</transition>
 </template>
@@ -42,8 +43,21 @@ export default {
 	bottom: 20%;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	background: #220955;
+	// background: #220955;
 	border-radius: 50%;
+}
+
+.fill {
+	position: absolute;
+	top: 9px;
+	transform: translateX(-50%);
+	left: 48%;
+	width: 44px;
+	height: 42px;
+	background: #220955;
+	z-index: -1;
+	border-radius: 50%;
+	box-shadow: -4px -1px 14px 7px #0f061d42;
 }
 
 .elevator:hover {
