@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;400;500;900&display=fallback');
+@import './colors';
+
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: #000;
+	color: $text-color;
+	font-family: 'Muli', sans-serif;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to right bottom, #4a12be, #210854 75%);
+}
+
+// body::after {
+// 	content: '';
+// 	position: fixed;
+// 	top: 0;
+// 	bottom: 0;
+// 	width: 100%;
+// 	z-index: -1;
+// 	background-image: url('~@/assets/img/hviezdy.png');
+// 	// background: linear-gradient(to right bottom, #ff0038, #200e40 75%); //s cervenou
+// 	animation: universe 20s infinite ease-in-out;
+// }
+
+@keyframes universe {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	color: $text-color;
+	padding: 0.7em 1em;
+	background: #000;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 99;
+}
+
+/**    HOME styles        **/
+@import './home';

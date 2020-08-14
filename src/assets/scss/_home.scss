@@ -1,0 +1,21 @@
+.content {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
+
+	.btn-home {
+		background: rgba(255, 0, 56, 0.8);
+		box-shadow: -0px 0px 10px 0px rgba(255, 0, 56, 0.6);
+	}
+}
+
+.content-title {
+	box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
+	padding: 1em;
+	border-radius: 1em;
+	z-index: 1;
+}
