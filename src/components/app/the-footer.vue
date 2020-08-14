@@ -56,10 +56,14 @@
 				</ul>
 			</fieldset>
 		</main>
-		<h3>
-			Made by
-			<strong>David Havlín</strong>
-		</h3>
+		<div class="podpis">
+			<h3>
+				Made by
+				<strong>David Havlín</strong>
+			</h3>
+
+			<p>(Tato webstránka slúži len na ukážku)</p>
+		</div>
 	</footer>
 </template>
 
@@ -69,22 +73,22 @@ export default {}
 
 <style lang="scss" scoped>
 .fa-facebook-square {
-	color: rgb(8, 77, 238);
+	color: #2164ff;
 }
 .fa-google-plus-square {
-	color: rgb(240, 51, 3);
+	color: #ff0841;
 }
 .fa-twitter-square {
-	color: rgb(7, 173, 233);
+	color: #1079fa;
 }
 .fa-envelope-square {
-	color: rgb(238, 119, 8);
+	color: #ffd715;
 }
 .icon {
 	margin-bottom: 0.3em;
 	font-size: 1.7em;
 	transition: all 0.3s ease;
-	box-shadow: 3px 3px 4px #0e061c63;
+	color: #160633;
 }
 
 .web {
@@ -114,10 +118,14 @@ main {
 fieldset {
 	color: #ffffffb8;
 	font-size: 0.9em;
-	text-align: center;
+	text-align: left;
 	border: 2px dashed rgba(84, 89, 193, 0.1);
 	border-radius: 1rem;
 	padding: 2em;
+
+	&:last-child {
+		text-align: center;
+	}
 }
 legend {
 	text-align: left;
@@ -126,17 +134,24 @@ legend {
 p {
 	margin: 0;
 	margin-top: -2em;
+	color: #a072ff;
 }
 
 h2 {
 	color: #fff;
 	font-size: 1.3em;
 }
+.podpis {
+	h3 {
+		margin-top: 8em;
+		color: rgba(14, 6, 28, 1);
+		font-weight: 500;
+	}
 
-h3 {
-	margin-top: 8em;
-	color: rgba(14, 6, 28, 1);
-	font-weight: 500;
+	p {
+		color: #4203c3;
+		margin-top: -0.8rem;
+	}
 }
 
 a {
