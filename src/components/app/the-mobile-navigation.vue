@@ -74,9 +74,36 @@
 
 					<router-link @click.native="closeMenu()" to="/kontakt">Kontakt</router-link>
 				</div>
-				<svg class="shape-bottom" viewBox="0 0 1440 320">
+
+				<div class="mobile-social">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="fab fa-facebook-square icon"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fab fa-google-plus-square icon"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fab fa-twitter-square icon"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-envelope-square icon"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-bg" :class="{skuska:dropdown}"></div>
+				<!-- <svg class="shape-bottom" viewBox="0 0 1440 320">
 					<path fill="#0099ff" fill-opacity="1" d="M0,32L1440,288L1440,320L0,320Z" />
-				</svg>
+				</svg>-->
 			</div>
 		</transition>
 	</nav>
@@ -288,5 +315,63 @@ nav {
 .mobile-dropdown-leave {
 	opacity: 1;
 	transform: translateX(0px);
+}
+
+.mobile-social {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	font-size: 3em;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+	}
+
+	li {
+		list-style-type: none;
+		margin-right: 2rem;
+		transition: transform 0.3s ease;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			color: #d70170;
+		}
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+}
+
+.footer-bg {
+	position: absolute;
+	height: 477px;
+	width: 1010px;
+	background: #170537;
+	// transform: translate(-50px, 260px);
+	bottom: -30rem;
+	left: -7rem;
+}
+
+.skuska {
+	animation: skuska 1s forwards ease;
+	animation-delay: 0.5s;
+}
+
+@keyframes skuska {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(15deg);
+		bottom: -25rem;
+	}
 }
 </style>
