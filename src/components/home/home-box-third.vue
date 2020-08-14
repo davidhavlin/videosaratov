@@ -35,14 +35,14 @@
 			data-lax-rotate_large="-1000 -25, 600 0"
 			data-lax-rotate_medium="-1000 30, 600 0"
 			data-lax-rotate_small="-1000 62, 600 40"
-			data-lax-opacity="-500 0, -400 1"
+			data-lax-opacity="-500 0, -400 1, 400 1, 600 0"
 			data-lax-anchor="self"
 		>
 			<img src="@/assets/img/ovladace.png" alt />
 		</div>
 
 		<!-- SEKCIA HEADSET -->
-		<section class="content-title-2 animate__animated" ref="section_2">
+		<section ref="section_2" class="content-title-2 animate__animated">
 			<h1>Headset</h1>
 			<p>
 				Pri hre sa pohybujete v priestore cca 3 x 3 m, na hlave máte
@@ -129,7 +129,9 @@ export default {
 			onShown(elem) {
 				elem.classList.add('animate__fadeInLeft')
 			},
-			targets: [this.$refs.section_2, this.$refs.section_4]
+			targets: [this.$refs.section_2, this.$refs.section_4],
+			once: true,
+			threshold: 0.3
 		})
 
 		this.so = ScrollOut({
@@ -250,7 +252,7 @@ export default {
 	}
 }
 section {
-	border: 2px dashed rgb(64 70 201 / 23%);
+	border: 2px dashed transparent;
 	text-align: left;
 	padding: 1.6em;
 	border-radius: 1em;
