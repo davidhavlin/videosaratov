@@ -1,7 +1,9 @@
 <template>
-	<aside class="content" ref="content">
+	<aside class="content"
+		   ref="content">
 		<div class="content-img">
-			<img src="@/assets/img/content.jpg" alt />
+			<img src="@/assets/img/content.jpg"
+				 alt />
 		</div>
 		<div class="content-title">
 			<h1>
@@ -16,7 +18,10 @@
 				<strong>Vstúpte priamo do hry!</strong>
 			</p>
 
-			<a class="btn btn-home" href="https://cli.vuejs.org" target="_blank" rel="noopener">Objednať sa</a>
+			<a class="btn btn-home"
+			   href="https://cli.vuejs.org"
+			   target="_blank"
+			   rel="noopener">Objednať sa</a>
 		</div>
 	</aside>
 </template>
@@ -83,7 +88,7 @@ export default {
 		grid-column: 1 / 4;
 		grid-row: 3 / 6;
 
-		background: linear-gradient(12deg, #f80f2b 0%, #ea093e 100%);
+		background: linear-gradient(12deg, #1063fb 0%, #6415ff 100%);
 		box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
 		padding: 1em;
 		border-radius: 1em;
@@ -115,8 +120,8 @@ export default {
 
 .btn-home {
 	text-align: right;
-	background: #130c1e;
-	box-shadow: -0px 0px 10px 0px rgba(15, 0, 41, 0.6);
+	background: #2e1492;
+	box-shadow: 0px 0px 10px 0px rgb(46 20 146);
 	transition: all 0.3s cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
 .btn-home:hover,
