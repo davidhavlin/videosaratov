@@ -1,18 +1,20 @@
 <template>
 	<div class="coupone-section">
 		<h3>Možnosť kúpiť darčekové poukazy.</h3>
-		<a href="#" class="btn" @click.prevent="modal = true">Kúpiť</a>
-		<img src="@/assets/img/undraw_happy.svg" alt />
+		<a href="#"
+		   class="btn"
+		   @click.prevent="modal = true">Kúpiť</a>
+		<img src="@/assets/img/undraw_happy.svg"
+			 alt />
 		<svg class="shape">
-			<path
-				fill="#FF0066"
-				d="M58.1,-19C67.1,9,60.7,41.9,43.5,52.8C26.2,63.7,-1.9,52.5,-23.5,35.9C-45.1,19.4,-60.2,-2.5,-55.2,-24.9C-50.2,-47.3,-25.1,-70.2,-0.3,-70.1C24.5,-70,49,-46.9,58.1,-19Z"
-				transform="translate(100 100)"
-			/>
+			<path fill="#FF0066"
+				  d="M58.1,-19C67.1,9,60.7,41.9,43.5,52.8C26.2,63.7,-1.9,52.5,-23.5,35.9C-45.1,19.4,-60.2,-2.5,-55.2,-24.9C-50.2,-47.3,-25.1,-70.2,-0.3,-70.1C24.5,-70,49,-46.9,58.1,-19Z"
+				  transform="translate(100 100)" />
 		</svg>
 
 		<transition name="modal">
-			<TheModal v-if="modal" @closeModal="modal = $event">
+			<TheModal v-if="modal"
+					  @closeModal="modal = $event">
 				<price-giftcard @closeModal="modal = $event" />
 			</TheModal>
 		</transition>
@@ -40,7 +42,7 @@ export default {
 	position: relative;
 }
 .btn {
-	background: #bf1052;
+	background: #ea093e;
 	color: #fdfdff;
 	transition: all 0.5s ease;
 }
