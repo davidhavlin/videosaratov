@@ -1,17 +1,15 @@
 <template>
 	<div class="category-navigation">
-		<a
-			v-for="(link, index) in links"
-			:key="index"
-			href="#"
-			class="btn"
-			:class="{
+		<a v-for="(link, index) in links"
+		   :key="index"
+		   href="#"
+		   class="btn"
+		   :class="{
 				active: index == current && !searching,
 				disabled: loading
 			}"
-			:data-class="withoutDia(link, vocals)"
-			@click.prevent="categorizeIt($event), (current = index)"
-		>{{ link }}</a>
+		   :data-class="withoutDia(link, vocals)"
+		   @click.prevent="categorizeIt($event), (current = index)">{{ link }}</a>
 	</div>
 </template>
 
@@ -127,7 +125,7 @@ export default {
 .btn {
 	background: #570de9;
 	margin-right: 0.1em;
-	color: #a9a6cf;
+	color: #ffffff;
 	font-weight: 500;
 }
 .btn:hover {
