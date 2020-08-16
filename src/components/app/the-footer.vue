@@ -24,7 +24,8 @@
 					amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua.
 				</p>
-				<a href="#" class="web">Videosaratov web stránka</a>
+				<a href="#"
+				   class="web">Videosaratov web stránka</a>
 			</fieldset>
 			<fieldset>
 				<legend style="padding: 1em 1em ">
@@ -119,7 +120,7 @@ fieldset {
 	color: #ffffffb8;
 	font-size: 0.9em;
 	text-align: left;
-	border: 2px dashed rgba(84, 89, 193, 0.1);
+	border: 2px dashed rgb(67 34 160);
 	border-radius: 1rem;
 	padding: 2em;
 
@@ -134,11 +135,11 @@ legend {
 p {
 	margin: 0;
 	margin-top: -2em;
-	color: #a072ff;
+	color: #775fff;
 }
 
 h2 {
-	color: #fff;
+	color: #160633;
 	font-size: 1.3em;
 }
 .podpis {
@@ -149,18 +150,18 @@ h2 {
 	}
 
 	p {
-		color: #4203c3;
+		color: #775fff;
 		margin-top: -0.8rem;
 	}
 }
 
 a {
 	text-decoration: none;
-	color: #fff;
+	color: #775fff;
 }
 
 a:hover {
-	color: rgba(84, 89, 193, 1);
+	color: #fff;
 	text-decoration: underline;
 }
 a:hover .icon {
