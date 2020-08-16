@@ -1,10 +1,14 @@
 <template>
 	<div class="the-navigation">
-		<nav class="nav" ref="navigation">
+		<nav class="nav"
+			 ref="navigation">
 			<!-- LAVA CAST NAVIGACIE / LOGO -->
-			<div @click="goHome()" class="nav-logo" ref="nieco">
+			<div @click="goHome()"
+				 class="nav-logo"
+				 ref="nieco">
 				<div>
-					<img src="@/assets/img/logoVR.png" alt />
+					<img src="@/assets/img/logoVR.png"
+						 alt />
 				</div>
 				<p class="nav-title">
 					Video Saratov
@@ -17,13 +21,11 @@
 
 			<!-- PRAVA CAST NAVIGACIE / LINKY -->
 			<div>
-				<router-link
-					class="vr-link"
-					:class="{hovered: dropDown}"
-					@mouseenter.native="dropDown = true"
-					@click.native="dropDown = !dropDown"
-					to="/"
-				>
+				<router-link class="vr-link"
+							 :class="{hovered: dropDown}"
+							 @mouseenter.native="dropDown = true"
+							 @click.native="dropDown = !dropDown"
+							 to="/">
 					<span class="icon">
 						<i class="fas fa-chevron-down"></i>
 					</span>
@@ -31,19 +33,20 @@
 				</router-link>
 
 				<transition name="dropdown">
-					<div class="dropdown" v-show="dropDown" @click="dropDown = false" ref="dropdown">
+					<div class="dropdown"
+						 v-show="dropDown"
+						 @click="dropDown = false"
+						 ref="dropdown">
 						<div class="dropdown-content">
-							<router-link :to="{	name: 'Home'}" class="dropdown-link" href="#htc-vive">Domov</router-link>
-							<router-link
-								:to="{	name: 'Home', hash: '#htc-vive'}"
-								class="dropdown-link"
-								href="#htc-vive"
-							>Htc Vive</router-link>
-							<router-link
-								:to="{	name: 'Home', hash: '#gallery'}"
-								class="dropdown-link"
-								href="#gallery"
-							>Galeria</router-link>
+							<router-link :to="{	name: 'Home'}"
+										 class="dropdown-link"
+										 href="#htc-vive">Domov</router-link>
+							<router-link :to="{	name: 'Home', hash: '#htc-vive'}"
+										 class="dropdown-link"
+										 href="#htc-vive">Htc Vive</router-link>
+							<router-link :to="{	name: 'Home', hash: '#gallery'}"
+										 class="dropdown-link"
+										 href="#gallery">Galeria</router-link>
 						</div>
 					</div>
 				</transition>
@@ -202,16 +205,16 @@ export default {
 // 	padding: 0;
 // 	position: fixed;
 // }
-.background-circle {
-	background-image: url('~@/assets/img/circle.png');
-	position: absolute;
-	top: -344px;
-	width: 780px;
-	height: 600px;
-	background-repeat: no-repeat;
-	left: 360px;
-	z-index: -1;
-}
+// .background-circle {
+// 	background-image: url('~@/assets/img/circle.png');
+// 	position: absolute;
+// 	top: -344px;
+// 	width: 780px;
+// 	height: 600px;
+// 	background-repeat: no-repeat;
+// 	left: 360px;
+// 	z-index: -1;
+// }
 
 .the-navigation {
 	width: 100%;
