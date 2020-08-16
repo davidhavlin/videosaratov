@@ -157,14 +157,14 @@ export default {
 }
 
 .slide2 {
-	background-image: url('~@/assets/img/slides/slide2.jpg');
+	background-image: url('~@/assets/img/slides/slide2.webp');
 	background-size: cover;
 	background-repeat: no-repeat;
 	animation: fadeIn 2s ease;
 }
 
 .slide3 {
-	background-image: url('~@/assets/img/slides/pozadie.jpg');
+	background-image: url('~@/assets/img/slides/slide3.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	animation: fadeIn 2s ease;
@@ -211,7 +211,7 @@ section {
 }
 
 .second-section {
-	background-image: url('~@/assets/img/cyber-minnnnnnnnnnnnnnn.webp');
+	background-image: url('~@/assets/img/cityup.webp');
 	background-color: #2f1238;
 	background-size: cover;
 	background-repeat: no-repeat;
