@@ -1,7 +1,9 @@
 <template>
 	<nav>
-		<div class="menu-logo">
-			<img src="@/assets/img/logoVR.png" alt />
+		<div class="menu-logo"
+			 @click="goHome()">
+			<img src="@/assets/img/logoVR.png"
+				 alt />
 		</div>
 		<!-- <div class="menu-burger" @click="dropdown = true">
 			<i class="fas fa-bars"></i>
@@ -10,27 +12,30 @@
 		<the-burger @openMenu="dropdown = $event" />
 
 		<transition name="mobile-dropdown">
-			<div v-if="dropdown" class="dropdown-menu" ref="mobile">
-				<div class="arrow-back" @click="closeMenu()">
+			<div v-if="dropdown"
+				 class="dropdown-menu"
+				 ref="mobile">
+				<div class="header-bg"
+					 :class="{headerAnimation:dropdown}"></div>
+				<div class="arrow-back"
+					 @click="closeMenu()">
 					<div class="arrow">
 						<i class="fas fa-arrow-right"></i>
 					</div>
 				</div>
-				<div @click="goHome()" class="nav-logo">
+				<div @click="goHome()"
+					 class="nav-logo">
 					<div>
-						<img src="@/assets/img/logoVR.png" alt />
+						<img src="@/assets/img/logoVR.png"
+							 alt />
 					</div>
 				</div>
-				<svg class="shape" viewBox="0 0 1440 320">
-					<path fill="#20064c" fill-opacity="1" d="M0,256L1440,32L1440,320L0,320Z" />
-				</svg>
+
 				<div class="mobile-links">
 					<div class="link-dropdown">
-						<a
-							class="vr-link-mobile"
-							:class="{hovered: dropDownList}"
-							@click="dropDownList = !dropDownList"
-						>
+						<a class="vr-link-mobile"
+						   :class="{hovered: dropDownList}"
+						   @click="dropDownList = !dropDownList">
 							Virtuálna realita
 							<span class="icon">
 								<i class="fas fa-chevron-down"></i>
@@ -38,44 +43,43 @@
 						</a>
 
 						<transition name="dropdown">
-							<div class="dropdown-mobile" v-show="dropDownList">
+							<div class="dropdown-mobile"
+								 v-show="dropDownList">
 								<div class="dropdown-mobile-content">
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home'}"
-										class="dropdown-link"
-										href="#htc-vive"
-									>Domov</router-link>
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home', hash: '#htc-vive'}"
-										class="dropdown-link"
-										href="#htc-vive"
-									>Htc Vive</router-link>
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home', hash: '#gallery'}"
-										class="dropdown-link"
-										href="#gallery"
-									>Galeria</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home'}"
+												 class="dropdown-link"
+												 href="#htc-vive">Domov</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home', hash: '#htc-vive'}"
+												 class="dropdown-link"
+												 href="#htc-vive">Htc Vive</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home', hash: '#gallery'}"
+												 class="dropdown-link"
+												 href="#gallery">Galeria</router-link>
 								</div>
 							</div>
 						</transition>
 					</div>
 
-					<router-link @click.native="closeMenu()" to="/hry">
+					<router-link @click.native="closeMenu()"
+								 to="/hry">
 						<span>
 							<i class="fas fa-gamepad"></i>
 						</span>
 						Hry
 					</router-link>
 
-					<router-link @click.native="closeMenu()" to="/cennik">Cenník</router-link>
+					<router-link @click.native="closeMenu()"
+								 to="/cennik">Cenník</router-link>
 
-					<router-link @click.native="closeMenu()" to="/kontakt">Kontakt</router-link>
+					<router-link @click.native="closeMenu()"
+								 to="/kontakt">Kontakt</router-link>
 				</div>
 
-				<div class="mobile-social">
+				<div class="mobile-social"
+					 :class="{socialAnimation:dropdown}">
 					<ul>
 						<li>
 							<a href="#">
@@ -100,7 +104,8 @@
 					</ul>
 				</div>
 
-				<div class="footer-bg" :class="{skuska:dropdown}"></div>
+				<div class="footer-bg"
+					 :class="{footerAnimation:dropdown}"></div>
 				<!-- <svg class="shape-bottom" viewBox="0 0 1440 320">
 					<path fill="#0099ff" fill-opacity="1" d="M0,32L1440,288L1440,320L0,320Z" />
 				</svg>-->
@@ -150,7 +155,8 @@ nav {
 }
 .nav-logo {
 	padding: 1.7em 0 6rem 0;
-	background: #170537;
+	// opacity: 0.1;
+	// background: #170537;
 
 	img {
 		width: 130px;
@@ -216,6 +222,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 
 	img {
 		width: 100%;
@@ -319,6 +326,7 @@ nav {
 
 .mobile-social {
 	position: absolute;
+	opacity: 0;
 	bottom: 0;
 	z-index: 1;
 	width: 100%;
@@ -349,28 +357,64 @@ nav {
 		}
 	}
 }
-
+.header-bg {
+	position: absolute;
+	height: 477px;
+	width: 1010px;
+	background: #170537;
+	top: -30rem;
+	left: -7rem;
+	z-index: -2;
+}
 .footer-bg {
 	position: absolute;
 	height: 477px;
 	width: 1010px;
 	background: #170537;
-	// transform: translate(-50px, 260px);
 	bottom: -30rem;
 	left: -7rem;
 }
 
-.skuska {
-	animation: skuska 1s forwards ease;
+.headerAnimation {
+	animation: header 1s forwards ease;
+	animation-delay: 0.5s;
+}
+.footerAnimation {
+	animation: footer 1s forwards ease;
 	animation-delay: 0.5s;
 }
 
-@keyframes skuska {
+.socialAnimation {
+	animation: social 1s forwards ease;
+	animation-delay: 0.5s;
+}
+@keyframes social {
+	from {
+		opacity: 0;
+		transform: scale(0) translateY(700px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes header {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(15deg);
+		transform: rotate(11deg);
+		top: -19rem;
+	}
+}
+
+@keyframes footer {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(11deg);
 		bottom: -25rem;
 	}
 }
