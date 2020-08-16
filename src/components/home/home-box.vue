@@ -1,13 +1,17 @@
 <template>
-	<aside class="content" ref="content">
-		<div class="content-title" ref="inner">
+	<aside class="content"
+		   ref="content">
+		<div class="content-title"
+			 ref="inner">
 			<h1 class="content-h1">Virtuálna realita</h1>
 			<p>
 				Príďte si vyskúšať Virtuálnu Realitu.
 				<strong>Vstúpte do sveta, o ktorom sa Vám iba snívalo.</strong>
 			</p>
 
-			<a class="btn btn-home" href="#" rel="noopener">Zistiť viac!</a>
+			<a class="btn btn-home"
+			   href="#"
+			   rel="noopener">Zistiť viac!</a>
 		</div>
 	</aside>
 </template>
@@ -160,7 +164,7 @@ export default {
 	.btn-home:hover,
 	.btn-home:focus {
 		transform: scale(1.1);
-		// box-shadow: 6px 7px 1px -1px #130c1e1f;
+		box-shadow: 6px 7px 1px -1px #130c1e1f;
 		color: #fff;
 	}
 }
