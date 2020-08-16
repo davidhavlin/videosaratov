@@ -45,6 +45,8 @@ export default {
 	background: #ea093e;
 	color: #fdfdff;
 	transition: all 0.5s ease;
+	position: relative;
+	z-index: 6;
 }
 .btn:hover,
 .btn:active {
@@ -58,7 +60,7 @@ img {
 	width: 330px;
 	height: auto;
 	bottom: -130px;
-	z-index: -2;
+	z-index: 5;
 	transform: translate(-40px, -80px) rotate(10deg);
 	transition: all 1s cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }

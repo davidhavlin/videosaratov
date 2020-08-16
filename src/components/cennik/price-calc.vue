@@ -1,8 +1,11 @@
 <template>
 	<div class="price-calculator">
 		<transition name="fadeModal">
-			<div class="result" v-if="resultShow">
-				<a class="result-exit" href="#" @click.prevent="resultShow = !resultShow">
+			<div class="result"
+				 v-if="resultShow">
+				<a class="result-exit"
+				   href="#"
+				   @click.prevent="resultShow = !resultShow">
 					<i class="far fa-times-circle"></i>
 				</a>
 				<div>
@@ -15,63 +18,58 @@
 		<form id="time-form">
 			<label for="time">Ako dlho chceš hrať? (v minutách)</label>
 			<div class="inputTime">
-				<span class="spanTime" v-if="inputTime > 240">Maximálne 4 hodiny!</span>
-				<span
-					class="spanTime"
-					v-else-if="
+				<span class="spanTime"
+					  v-if="inputTime > 240">Maximálne 4 hodiny!</span>
+				<span class="spanTime"
+					  v-else-if="
 					(inputTime < 5 && !inputTime == '') || inputTime == 0
-				"
-				>Minimálne 5 minút!</span>
+				">Minimálne 5 minút!</span>
 
-				<input
-					ref="inputTime"
-					id="time"
-					type="number"
-					min="5"
-					max="240"
-					v-model.number="inputTime"
-					:class="{bordered: errorTime}"
-				/>
+				<input ref="inputTime"
+					   id="time"
+					   type="number"
+					   min="5"
+					   max="240"
+					   v-model.number="inputTime"
+					   :class="{bordered: errorTime}" />
 			</div>
 
 			<label for="people">Kolkatí chcete hrať?</label>
 			<div class="inputPeople">
-				<span class="spanPeople" v-if="inputPeople > 10">Maximálne 10 osôb!</span>
-				<span
-					class="spanPeople"
-					v-else-if="
+				<span class="spanPeople"
+					  v-if="inputPeople > 10">Maximálne 10 osôb!</span>
+				<span class="spanPeople"
+					  v-else-if="
 						(inputPeople < 1 && !inputPeople == '') ||
 							inputPeople == 0
-					"
-				>Minimálne 1 osoba!</span>
+					">Minimálne 1 osoba!</span>
 
-				<input
-					ref="inputPeople"
-					id="people"
-					type="number"
-					min="1"
-					max="10"
-					v-model.number="inputPeople"
-					:class="{bordered: errorPeople}"
-				/>
+				<input ref="inputPeople"
+					   id="people"
+					   type="number"
+					   min="1"
+					   max="10"
+					   v-model.number="inputPeople"
+					   :class="{bordered: errorPeople}" />
 			</div>
 
 			<label for="card">Máš vernostnú kartu?</label>
-			<select
-				class="selectCard"
-				ref="selectCard"
-				id="card"
-				v-model="inputCard"
-				:class="{ bordered: error }"
-			>
+			<select class="selectCard"
+					ref="selectCard"
+					id="card"
+					v-model="inputCard"
+					:class="{ bordered: error }">
 				<option value="def">Vyber z možností..</option>
 				<option value="1">Áno</option>
 				<option value="0">Nie</option>
 			</select>
 
 			<div class="price-buttons">
-				<button class="calculate-btn" @click.prevent="calculatePrice()">Vypočítať</button>
-				<input class="reset-btn" type="reset" @click.prevent="resetForm()" />
+				<button class="calculate-btn"
+						@click.prevent="calculatePrice()">Vypočítať</button>
+				<input class="reset-btn"
+					   type="reset"
+					   @click.prevent="resetForm()" />
 			</div>
 		</form>
 	</div>
@@ -179,7 +177,7 @@ option {
 	height: 100%;
 	background: #423fa6eb;
 	padding: 2em;
-	z-index: 1000;
+	z-index: 10;
 	color: #fff;
 }
 
