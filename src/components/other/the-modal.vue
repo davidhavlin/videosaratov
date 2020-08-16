@@ -1,6 +1,7 @@
 <template>
 	<div class="modal">
-		<a class="modal-exit exit" @click="closeModal($event)">
+		<a class="modal-exit exit"
+		   @click="closeModal($event)">
 			<i class="exit far fa-times-circle"></i>
 		</a>
 		<div class="modal-content">
@@ -36,6 +37,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 110;
 }
 .modal-content {
 	color: #000;
@@ -53,7 +55,7 @@ export default {
 	text-decoration: none;
 	padding: 1em;
 	position: absolute;
-	color: #3f0b96;
+	color: #0b87dc;
 	top: 0;
 	right: 0;
 	cursor: pointer;
@@ -78,7 +80,12 @@ export default {
 @media (max-width: 400px) {
 	.modal-exit {
 		padding: 0.4em;
-		top: 79px;
+		// top: 79px;
+	}
+	.modal-content {
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
 }
 </style>
