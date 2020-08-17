@@ -1,6 +1,9 @@
 <template>
 	<div class="formular">
-		<h2>Napište nám (len test)</h2>
+		<h2>
+			Napište nám
+			<span>(len test)</span>
+		</h2>
 		<form @submit.prevent="sendEmail">
 			<div>
 				<label for="form-name">Name</label>
@@ -84,6 +87,11 @@ export default {
 
 	h2 {
 		text-align: left;
+
+		span {
+			font-weight: normal;
+			color: #450abc;
+		}
 	}
 
 	.img-container {
