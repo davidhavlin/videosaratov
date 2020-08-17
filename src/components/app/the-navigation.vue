@@ -1,14 +1,10 @@
 <template>
 	<div class="the-navigation">
-		<nav class="nav"
-			 ref="navigation">
+		<nav class="nav" ref="navigation">
 			<!-- LAVA CAST NAVIGACIE / LOGO -->
-			<div @click="goHome()"
-				 class="nav-logo"
-				 ref="nieco">
+			<div @click="goHome()" class="nav-logo" ref="nieco">
 				<div>
-					<img src="@/assets/img/logoVR.png"
-						 alt />
+					<img src="@/assets/img/logoVR.png" alt />
 				</div>
 				<p class="nav-title">
 					Video Saratov
@@ -21,32 +17,27 @@
 
 			<!-- PRAVA CAST NAVIGACIE / LINKY -->
 			<div>
-				<router-link class="vr-link"
-							 :class="{hovered: dropDown}"
-							 @mouseenter.native="dropDown = true"
-							 @click.native="dropDown = !dropDown"
-							 to="/">
+				<a class="vr-link" :class="{hovered: dropDown}" @click="dropDown = !dropDown">
 					<span class="icon">
 						<i class="fas fa-chevron-down"></i>
 					</span>
 					Virtuálna realita
-				</router-link>
+				</a>
 
 				<transition name="dropdown">
-					<div class="dropdown"
-						 v-show="dropDown"
-						 @click="dropDown = false"
-						 ref="dropdown">
+					<div class="dropdown" v-show="dropDown" @click="dropDown = false" ref="dropdown">
 						<div class="dropdown-content">
-							<router-link :to="{	name: 'Home'}"
-										 class="dropdown-link"
-										 href="#htc-vive">Domov</router-link>
-							<router-link :to="{	name: 'Home', hash: '#htc-vive'}"
-										 class="dropdown-link"
-										 href="#htc-vive">Htc Vive</router-link>
-							<router-link :to="{	name: 'Home', hash: '#gallery'}"
-										 class="dropdown-link"
-										 href="#gallery">Galeria</router-link>
+							<router-link :to="{	name: 'Home'}" class="dropdown-link" href="#htc-vive">Domov</router-link>
+							<router-link
+								:to="{	name: 'Home', hash: '#htc-vive'}"
+								class="dropdown-link"
+								href="#htc-vive"
+							>Htc Vive</router-link>
+							<router-link
+								:to="{	name: 'Home', hash: '#gallery'}"
+								class="dropdown-link"
+								href="#gallery"
+							>Galeria</router-link>
 						</div>
 					</div>
 				</transition>
@@ -81,15 +72,10 @@
 </template>
 
 <script>
-// import { throttle } from "lodash-es";
-
 export default {
 	data() {
 		return {
-			dropDown: false,
-			scrollUp: 'scroll-up',
-			scrollDown: 'scroll-down',
-			lastScroll: 0
+			dropDown: false
 		}
 	},
 	methods: {
@@ -97,7 +83,10 @@ export default {
 			this.$router.push('/')
 		},
 		close(e) {
-			if (!this.$refs.dropdown.contains(e.target)) {
+			console.log(e.target.classList)
+			if (e.target.classList.contains('vr-link')) {
+				return
+			} else {
 				this.dropDown = false
 			}
 		}
@@ -194,33 +183,10 @@ export default {
 	margin-left: -11px;
 }
 
-// [data-scroll-dir-y] .nav {
-// 	transition: all 0.3s ease-in;
-// }
-// [data-scroll-dir-y='1'] .nav {
-// 	transform: translateY(-50px);
-// }
-// [data-scroll-dir-y='-1'] .nav {
-// 	background: #000;
-// 	padding: 0;
-// 	position: fixed;
-// }
-// .background-circle {
-// 	background-image: url('~@/assets/img/circle.png');
-// 	position: absolute;
-// 	top: -344px;
-// 	width: 780px;
-// 	height: 600px;
-// 	background-repeat: no-repeat;
-// 	left: 360px;
-// 	z-index: -1;
-// }
-
 .the-navigation {
 	width: 100%;
 	z-index: 20;
 	margin: 2em 0;
-	// overflow: hidden;
 }
 
 .nav {
@@ -229,11 +195,11 @@ export default {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.9em 0;
-
 	margin: 2em auto;
 	max-width: 1000px;
 
 	a {
+		cursor: pointer;
 		position: relative;
 		display: inline-block;
 		font-weight: 500;
@@ -244,10 +210,6 @@ export default {
 		text-shadow: 0px 1px 8px #165ffb3d;
 		transition: all 0.2s ease-in-out;
 		opacity: 0.8;
-
-		// &:last-child {
-		// 	padding-right: 0;
-		// }
 
 		.icon {
 			position: absolute;
@@ -304,7 +266,10 @@ export default {
 	background: #0b87dc;
 	transition: all 1s ease;
 }
-
+nav a.hovered {
+	color: #fff;
+	opacity: 1;
+}
 .hovered.vr-link:after {
 	width: 120px;
 }
