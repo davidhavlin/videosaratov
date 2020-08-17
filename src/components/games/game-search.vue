@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<form v-on:keyup="debouncedSearch()">
+		<form @keyup.prevent="debouncedSearch()" onsubmit="return false">
 			<div @click="searchInput.focus()" class="icon">
 				<i class="fas fa-search"></i>
 			</div>
@@ -99,11 +99,11 @@ input {
 	background: transparent;
 	outline: none;
 	transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-	background: rgba(22, 7, 48, 0.78);
+	background: rgb(19 6 41);
 	margin-left: 0.2em;
 }
 ::placeholder {
-	color: #7f24ff42;
+	color: #570de9;
 }
 
 input:focus {

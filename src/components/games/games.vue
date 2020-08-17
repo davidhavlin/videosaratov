@@ -135,7 +135,7 @@ a {
 	position: relative;
 	border-radius: 0.5em;
 	overflow: hidden;
-	background: #170732;
+	background: #130629;
 	transition: all 0.3s ease;
 }
 

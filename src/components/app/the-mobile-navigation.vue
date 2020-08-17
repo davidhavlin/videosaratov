@@ -179,7 +179,7 @@ nav {
 		font-size: 0.7em;
 	}
 }
-.hovered.vr-link-mobile {
+.mobile-links a.hovered.vr-link-mobile {
 	color: #d7016e;
 }
 .menu-burger {
@@ -400,7 +400,7 @@ nav {
 	}
 	to {
 		transform: rotate(11deg);
-		bottom: -25rem;
+		bottom: -22rem;
 	}
 }
 </style>
