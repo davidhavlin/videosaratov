@@ -1,7 +1,9 @@
 <template>
-	<aside class="content" ref="content">
+	<aside class="content"
+		   ref="content">
 		<div class="content-img">
-			<img src="@/assets/img/content.jpg" alt />
+			<img src="@/assets/img/content.jpg"
+				 alt />
 		</div>
 		<div class="content-title">
 			<h1>
@@ -16,7 +18,9 @@
 				<strong>Vstúpte priamo do hry!</strong>
 			</p>
 
-			<a class="btn btn-home" @click.prevent="showInfo()" rel="noopener">Objednať sa</a>
+			<a class="btn btn-home"
+			   @click.prevent="showInfo()"
+			   rel="noopener">Objednať sa</a>
 			<transition name="modal">
 				<the-info v-if="info" />
 			</transition>
@@ -143,7 +147,7 @@ export default {
 .btn-home:hover,
 .btn-home:focus {
 	transform: scale(1.1);
-	box-shadow: 6px 7px 1px -1px #130c1e3a;
+	box-shadow: 5px 6px 1px -1px rgb(13 65 130);
 }
 
 @media (max-width: 810px) {

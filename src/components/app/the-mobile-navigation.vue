@@ -1,32 +1,38 @@
 <template>
 	<nav>
-		<div class="menu-logo" @click="goHome()">
-			<img src="@/assets/img/logoVR.webp" alt />
+		<div class="menu-logo"
+			 @click="goHome()">
+			<img src="@/assets/img/logoVR.webp"
+				 alt />
 		</div>
 
 		<the-burger @openMenu="dropdown = $event" />
 
 		<transition name="mobile-dropdown">
-			<div v-if="dropdown" class="dropdown-menu" ref="mobile">
-				<div class="header-bg" :class="{headerAnimation:dropdown}"></div>
-				<div class="arrow-back" @click="closeMenu()">
+			<div v-if="dropdown"
+				 class="dropdown-menu"
+				 ref="mobile">
+				<div class="header-bg"
+					 :class="{headerAnimation:dropdown}"></div>
+				<div class="arrow-back"
+					 @click="closeMenu()">
 					<div class="arrow">
 						<i class="fas fa-arrow-right"></i>
 					</div>
 				</div>
-				<div @click="goHome()" class="nav-logo">
+				<div @click="goHome()"
+					 class="nav-logo">
 					<div>
-						<img src="@/assets/img/logoVR.webp" alt />
+						<img src="@/assets/img/logoVR.webp"
+							 alt />
 					</div>
 				</div>
 
 				<div class="mobile-links">
 					<div class="link-dropdown">
-						<a
-							class="vr-link-mobile"
-							:class="{hovered: dropDownList}"
-							@click="dropDownList = !dropDownList"
-						>
+						<a class="vr-link-mobile"
+						   :class="{hovered: dropDownList}"
+						   @click="dropDownList = !dropDownList">
 							Virtuálna realita
 							<span class="icon">
 								<i class="fas fa-chevron-down"></i>
@@ -34,44 +40,43 @@
 						</a>
 
 						<transition name="dropdown">
-							<div class="dropdown-mobile" v-show="dropDownList">
+							<div class="dropdown-mobile"
+								 v-show="dropDownList">
 								<div class="dropdown-mobile-content">
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home'}"
-										class="dropdown-link"
-										href="#htc-vive"
-									>Domov</router-link>
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home', hash: '#htc-vive'}"
-										class="dropdown-link"
-										href="#htc-vive"
-									>Htc Vive</router-link>
-									<router-link
-										@click.native="closeMenu()"
-										:to="{	name: 'Home', hash: '#gallery'}"
-										class="dropdown-link"
-										href="#gallery"
-									>Galeria</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home'}"
+												 class="dropdown-link"
+												 href="#htc-vive">Domov</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home', hash: '#htc-vive'}"
+												 class="dropdown-link"
+												 href="#htc-vive">Htc Vive</router-link>
+									<router-link @click.native="closeMenu()"
+												 :to="{	name: 'Home', hash: '#gallery'}"
+												 class="dropdown-link"
+												 href="#gallery">Galeria</router-link>
 								</div>
 							</div>
 						</transition>
 					</div>
 
-					<router-link @click.native="closeMenu()" to="/hry">
+					<router-link @click.native="closeMenu()"
+								 to="/hry">
 						<span>
 							<i class="fas fa-gamepad"></i>
 						</span>
 						Hry
 					</router-link>
 
-					<router-link @click.native="closeMenu()" to="/cennik">Cenník</router-link>
+					<router-link @click.native="closeMenu()"
+								 to="/cennik">Cenník</router-link>
 
-					<router-link @click.native="closeMenu()" to="/kontakt">Kontakt</router-link>
+					<router-link @click.native="closeMenu()"
+								 to="/kontakt">Kontakt</router-link>
 				</div>
 
-				<div class="mobile-social" :class="{socialAnimation:dropdown}">
+				<div class="mobile-social"
+					 :class="{socialAnimation:dropdown}">
 					<ul>
 						<li>
 							<a href="#">
@@ -96,7 +101,8 @@
 					</ul>
 				</div>
 
-				<div class="footer-bg" :class="{footerAnimation:dropdown}"></div>
+				<div class="footer-bg"
+					 :class="{footerAnimation:dropdown}"></div>
 			</div>
 		</transition>
 	</nav>
@@ -401,6 +407,20 @@ nav {
 	to {
 		transform: rotate(11deg);
 		bottom: -22rem;
+	}
+}
+
+@media (max-height: 600px) {
+	.nav-logo {
+		padding: 1.7em 0 2rem 0;
+		img {
+			width: 100px;
+		}
+	}
+
+	.header-bg,
+	.footer-bg {
+		display: none;
 	}
 }
 </style>
