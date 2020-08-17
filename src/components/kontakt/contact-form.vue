@@ -1,6 +1,6 @@
 <template>
 	<div class="formular">
-		<h2>Napište nám</h2>
+		<h2>Napište nám (len test)</h2>
 		<form @submit.prevent="sendEmail">
 			<div>
 				<label for="form-name">Name</label>

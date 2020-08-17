@@ -1,7 +1,7 @@
 <template>
 	<nav>
 		<div class="menu-logo" @click="goHome()">
-			<img src="@/assets/img/logoVR.png" alt />
+			<img src="@/assets/img/logoVR.webp" alt />
 		</div>
 
 		<the-burger @openMenu="dropdown = $event" />
@@ -16,7 +16,7 @@
 				</div>
 				<div @click="goHome()" class="nav-logo">
 					<div>
-						<img src="@/assets/img/logoVR.png" alt />
+						<img src="@/assets/img/logoVR.webp" alt />
 					</div>
 				</div>
 

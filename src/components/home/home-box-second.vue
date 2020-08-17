@@ -1,9 +1,7 @@
 <template>
-	<aside class="content"
-		   ref="content">
+	<aside class="content" ref="content">
 		<div class="content-img">
-			<img src="@/assets/img/content.jpg"
-				 alt />
+			<img src="@/assets/img/content.jpg" alt />
 		</div>
 		<div class="content-title">
 			<h1>
@@ -18,19 +16,38 @@
 				<strong>Vstúpte priamo do hry!</strong>
 			</p>
 
-			<a class="btn btn-home"
-			   href="https://cli.vuejs.org"
-			   target="_blank"
-			   rel="noopener">Objednať sa</a>
+			<a class="btn btn-home" @click.prevent="showInfo()" rel="noopener">Objednať sa</a>
+			<transition name="modal">
+				<the-info v-if="info" />
+			</transition>
 		</div>
 	</aside>
 </template>
 
 <script>
 import ScrollOut from 'scroll-out'
+import TheInfo from '@/components/other/the-info.vue'
 
 export default {
 	name: 'homeBox',
+
+	components: {
+		TheInfo
+	},
+	data() {
+		return {
+			info: false
+		}
+	},
+
+	methods: {
+		showInfo() {
+			this.info = true
+			setTimeout(() => {
+				this.info = false
+			}, 1500)
+		}
+	},
 
 	mounted() {
 		this.so = ScrollOut({
@@ -42,7 +59,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '@/assets/scss/_colors.scss';
 

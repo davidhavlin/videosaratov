@@ -4,7 +4,7 @@
 			<!-- LAVA CAST NAVIGACIE / LOGO -->
 			<div @click="goHome()" class="nav-logo" ref="nieco">
 				<div>
-					<img src="@/assets/img/logoVR.png" alt />
+					<img src="@/assets/img/logoVR.webp" alt />
 				</div>
 				<p class="nav-title">
 					Video Saratov

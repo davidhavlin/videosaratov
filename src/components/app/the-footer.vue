@@ -24,8 +24,7 @@
 					amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua.
 				</p>
-				<a href="#"
-				   class="web">Videosaratov web stránka</a>
+				<a href="#" class="web">Videosaratov web stránka</a>
 			</fieldset>
 			<fieldset>
 				<legend style="padding: 1em 1em ">
@@ -120,7 +119,7 @@ fieldset {
 	color: #ffffffb8;
 	font-size: 0.9em;
 	text-align: left;
-	border: 2px dashed rgb(67 34 160);
+	border: none;
 	border-radius: 1rem;
 	padding: 2em;
 

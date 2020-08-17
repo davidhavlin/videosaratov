@@ -11,7 +11,7 @@
 			data-lax-rotate="-1000 -20, vh 0"
 			data-lax-anchor="self"
 		>
-			<img src="@/assets/img/vrvr.jpg" alt />
+			<img src="@/assets/img/vrvr.webp" alt />
 		</div>
 
 		<!-- HORNA SEKCIA s obrazkom a popisom -->
@@ -21,7 +21,10 @@
 				Súprava HTC Vive obsahuje Headset a 2 ovládače. Ponúka najväčšiu
 				ponuku hier a zážitkov oproti iným systémom.
 			</p>
-			<a class="btn btn-home" href="#">Zistiť viac</a>
+			<a class="btn btn-home" @click.prevent="showInfo()">Zistiť viac</a>
+			<transition name="modal">
+				<the-info class="info-modal" v-if="info" />
+			</transition>
 		</section>
 		<!-- **************************** -->
 
@@ -38,7 +41,7 @@
 			data-lax-opacity="-500 0, -400 1, 400 1, 600 0"
 			data-lax-anchor="self"
 		>
-			<img src="@/assets/img/ovladace.png" alt />
+			<img src="@/assets/img/ovladace.webp" alt />
 		</div>
 
 		<!-- SEKCIA HEADSET -->
@@ -63,7 +66,7 @@
 			data-lax-rotate="-1000 20, 1000 0"
 			data-lax-anchor="self"
 		>
-			<img src="@/assets/img/htc.png" alt />
+			<img src="@/assets/img/htc.webp" alt />
 		</div>
 
 		<!-- SEKCIA CONTROLLERS -->
@@ -107,20 +110,33 @@
 			data-lax-rotate_ultrasmall="-1000 13, 1000 -5"
 			data-lax-anchor="self"
 		>
-			<img src="@/assets/img/vr.jpg" alt />
+			<img src="@/assets/img/vr.webp" alt />
 		</div>
 	</aside>
 </template>
 
 <script>
 import ScrollOut from 'scroll-out'
-// import { throttle } from 'lodash-es'
+import TheInfo from '@/components/other/the-info.vue'
 
 export default {
 	name: 'homeBox',
+	components: {
+		TheInfo
+	},
 	data() {
 		return {
-			sheduled: false
+			sheduled: false,
+			info: false
+		}
+	},
+
+	methods: {
+		showInfo() {
+			this.info = true
+			setTimeout(() => {
+				this.info = false
+			}, 1500)
 		}
 	},
 
@@ -278,6 +294,11 @@ section {
 .btn-home:focus {
 	transform: scale(1.1);
 	box-shadow: 6px 7px 1px -1px #130c1e3a;
+}
+
+.info-modal {
+	margin-top: -1rem;
+	right: 1rem;
 }
 
 @media (max-width: 860px) {

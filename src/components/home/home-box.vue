@@ -1,26 +1,30 @@
 <template>
-	<aside class="content"
-		   ref="content">
-		<div class="content-title"
-			 ref="inner">
+	<aside class="content" ref="content">
+		<div class="content-title" ref="inner">
 			<h1 class="content-h1">Virtuálna realita</h1>
 			<p>
 				Príďte si vyskúšať Virtuálnu Realitu.
 				<strong>Vstúpte do sveta, o ktorom sa Vám iba snívalo.</strong>
 			</p>
 
-			<a class="btn btn-home"
-			   href="#"
-			   rel="noopener">Zistiť viac!</a>
+			<a class="btn btn-home" @click.prevent="showInfo()" rel="noopener">Zistiť viac!</a>
+			<transition name="modal">
+				<the-info v-if="info" />
+			</transition>
 		</div>
 	</aside>
 </template>
 
 <script>
+import TheInfo from '@/components/other/the-info.vue'
 export default {
 	name: 'homeBox',
+	components: {
+		TheInfo
+	},
 	data() {
 		return {
+			info: false,
 			counter: 0,
 			updateRate: 10,
 			mouse: {
@@ -44,6 +48,12 @@ export default {
 		}
 	},
 	methods: {
+		showInfo() {
+			this.info = true
+			setTimeout(() => {
+				this.info = false
+			}, 1500)
+		},
 		update(event) {
 			this.mouse.updatePosition(event)
 			this.updateTransformStyle(
