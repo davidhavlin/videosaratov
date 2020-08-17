@@ -50,7 +50,6 @@ export default {
 	methods: {
 		sendEmail() {
 			this.emailSent = true
-			console.log('bu')
 			setTimeout(() => {
 				this.name = null
 				this.email = '@'

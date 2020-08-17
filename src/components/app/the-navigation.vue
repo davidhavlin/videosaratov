@@ -83,7 +83,6 @@ export default {
 			this.$router.push('/')
 		},
 		close(e) {
-			console.log(e.target.classList)
 			if (e.target.classList.contains('vr-link')) {
 				return
 			} else {

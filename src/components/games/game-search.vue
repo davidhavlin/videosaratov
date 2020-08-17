@@ -1,16 +1,11 @@
 <template>
 	<div>
 		<form v-on:keyup="debouncedSearch()">
-			<div @click="searchInput.focus()"
-				 class="icon">
+			<div @click="searchInput.focus()" class="icon">
 				<i class="fas fa-search"></i>
 			</div>
 
-			<input id="search-input"
-				   ref="search"
-				   type="text"
-				   placeholder="Hľadaj hru.."
-				   v-model="search" />
+			<input id="search-input" ref="search" type="text" placeholder="Hľadaj hru.." v-model="search" />
 		</form>
 	</div>
 </template>
@@ -43,7 +38,6 @@ export default {
 		}, 600),
 
 		searchGame() {
-			console.log(this.clicked)
 			let searchValue = this.search.toLowerCase().trim()
 			let games = document.querySelectorAll('.game')
 
@@ -54,7 +48,6 @@ export default {
 				this.searching = false
 				this.$emit('searching', this.searching)
 			}
-			console.log('searching je ', this.searching)
 
 			games.forEach(game => {
 				if (game.textContent.toLowerCase().includes(searchValue)) {

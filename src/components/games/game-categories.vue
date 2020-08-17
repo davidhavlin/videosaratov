@@ -1,15 +1,17 @@
 <template>
 	<div class="category-navigation">
-		<a v-for="(link, index) in links"
-		   :key="index"
-		   href="#"
-		   class="btn"
-		   :class="{
+		<a
+			v-for="(link, index) in links"
+			:key="index"
+			href="#"
+			class="btn"
+			:class="{
 				active: index == current && !searching,
 				disabled: loading
 			}"
-		   :data-class="withoutDia(link, vocals)"
-		   @click.prevent="categorizeIt($event), (current = index)">{{ link }}</a>
+			:data-class="withoutDia(link, vocals)"
+			@click.prevent="categorizeIt($event), (current = index)"
+		>{{ link }}</a>
 	</div>
 </template>
 
@@ -47,9 +49,6 @@ export default {
 	},
 
 	methods: {
-		debug(data) {
-			console.log(data)
-		},
 		withoutDia(str, map) {
 			return str
 				.toLowerCase()
@@ -58,7 +57,6 @@ export default {
 		},
 
 		categorizeIt(event) {
-			// this.searchInput.value = ''
 			this.clicked = true
 			this.$emit('clickedOnNav', this.clicked)
 
@@ -72,7 +70,6 @@ export default {
 			games.forEach(game => {
 				game.classList.add('visually-hidden')
 				game.addEventListener('transitionend', () => {
-					// game.classList.remove('visually-hidden')
 					game.classList.add('hide')
 
 					this.loading = true
