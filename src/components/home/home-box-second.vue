@@ -104,7 +104,7 @@ export default {
 		grid-column: 1 / 4;
 		grid-row: 3 / 6;
 
-		background: linear-gradient(12deg, #1063fb 0%, #6415ff 100%);
+		background: linear-gradient(12deg, #1079fb 0%, #1079fb 100%);
 		box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
 		padding: 1em;
 		border-radius: 1em;
@@ -136,8 +136,8 @@ export default {
 
 .btn-home {
 	text-align: right;
-	background: #2e1492;
-	box-shadow: 0px 0px 10px 0px rgb(46 20 146);
+	background: #0e60c6;
+	box-shadow: 0px 0px 10px 0px #0e60c65e;
 	transition: all 0.3s cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
 .btn-home:hover,
