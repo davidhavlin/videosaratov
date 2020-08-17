@@ -1,10 +1,14 @@
 <template>
 	<div class="the-navigation">
-		<nav class="nav" ref="navigation">
+		<nav class="nav"
+			 ref="navigation">
 			<!-- LAVA CAST NAVIGACIE / LOGO -->
-			<div @click="goHome()" class="nav-logo" ref="nieco">
+			<div @click="goHome()"
+				 class="nav-logo"
+				 ref="nieco">
 				<div>
-					<img src="@/assets/img/logoVR.webp" alt />
+					<img src="@/assets/img/logoVR.webp"
+						 alt />
 				</div>
 				<p class="nav-title">
 					Video Saratov
@@ -17,7 +21,9 @@
 
 			<!-- PRAVA CAST NAVIGACIE / LINKY -->
 			<div>
-				<a class="vr-link" :class="{hovered: dropDown}" @click="dropDown = !dropDown">
+				<a class="vr-link"
+				   :class="{hovered: dropDown}"
+				   @click="dropDown = !dropDown">
 					<span class="icon">
 						<i class="fas fa-chevron-down"></i>
 					</span>
@@ -25,19 +31,20 @@
 				</a>
 
 				<transition name="dropdown">
-					<div class="dropdown" v-show="dropDown" @click="dropDown = false" ref="dropdown">
+					<div class="dropdown"
+						 v-show="dropDown"
+						 @click="dropDown = false"
+						 ref="dropdown">
 						<div class="dropdown-content">
-							<router-link :to="{	name: 'Home'}" class="dropdown-link" href="#htc-vive">Domov</router-link>
-							<router-link
-								:to="{	name: 'Home', hash: '#htc-vive'}"
-								class="dropdown-link"
-								href="#htc-vive"
-							>Htc Vive</router-link>
-							<router-link
-								:to="{	name: 'Home', hash: '#gallery'}"
-								class="dropdown-link"
-								href="#gallery"
-							>Galeria</router-link>
+							<router-link :to="{	name: 'Home'}"
+										 class="dropdown-link"
+										 href="#htc-vive">Domov</router-link>
+							<router-link :to="{	name: 'Home', hash: '#htc-vive'}"
+										 class="dropdown-link"
+										 href="#htc-vive">Htc Vive</router-link>
+							<router-link :to="{	name: 'Home', hash: '#gallery'}"
+										 class="dropdown-link"
+										 href="#gallery">Galeria</router-link>
 						</div>
 					</div>
 				</transition>
@@ -208,7 +215,6 @@ export default {
 		color: #01a0f7;
 		text-shadow: 0px 1px 8px #165ffb3d;
 		transition: all 0.2s ease-in-out;
-		opacity: 0.8;
 
 		.icon {
 			position: absolute;
@@ -308,14 +314,14 @@ nav a.hovered {
 		font-weight: 600;
 		line-height: 1;
 		margin-left: 0.6em;
-		// text-shadow: 0px 0px 4px #039ff52b, -1px 0px 2px #24144dcf;
-		color: #0b87dc;
+		color: #0c95ff;
+		text-align: left;
 	}
 
 	.nav-sub-title {
 		font-size: 0.7em;
-		font-weight: 200;
-		color: #ffffff;
+		font-weight: 500;
+		color: #fff;
 	}
 
 	img {
