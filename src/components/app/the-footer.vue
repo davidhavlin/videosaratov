@@ -88,7 +88,7 @@ export default {}
 	margin-bottom: 0.3em;
 	font-size: 1.7em;
 	transition: all 0.3s ease;
-	color: #160633;
+	color: #775fff;
 }
 
 .web {
@@ -138,7 +138,7 @@ p {
 }
 
 h2 {
-	color: #160633;
+	color: #ffffff;
 	font-size: 1.3em;
 }
 .podpis {
@@ -164,6 +164,7 @@ a:hover {
 	text-decoration: underline;
 }
 a:hover .icon {
+	color: #fff;
 	transform: translateY(-7px);
 }
 

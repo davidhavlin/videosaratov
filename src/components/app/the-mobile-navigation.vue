@@ -124,6 +124,7 @@ export default {
 			this.dropdown = false
 		},
 		goHome() {
+			this.closeMenu()
 			this.$router.push('/')
 		}
 	}
@@ -236,28 +237,22 @@ nav {
 		text-align: left;
 		width: 100%;
 		display: block;
-		color: #0b87dc;
+		color: #fff;
 		padding: 1rem;
 		padding-left: 2rem;
 		text-decoration: none;
 		transition: all 0.4s ease;
-	}
-	a:hover {
-		color: #0b87dc;
-		background: #27065d;
+		z-index: 10;
 	}
 
 	a:active,
 	a:focus {
-		background: #4511b2;
 		outline: none;
-		color: #fff;
 	}
 
 	.dropdown-mobile {
 		font-size: 0.7em;
 		background: #1c0445;
-		// padding-left: 2rem;
 
 		a {
 			padding: 0.5rem;
@@ -342,31 +337,30 @@ nav {
 		}
 	}
 }
-.header-bg {
-	position: absolute;
-	height: 477px;
-	width: 1010px;
-	background: #170537;
-	top: -30rem;
-	left: -7rem;
-	z-index: -2;
-}
+.header-bg,
 .footer-bg {
 	position: absolute;
-	height: 477px;
-	width: 1010px;
+	height: 0;
+	width: 100%;
 	background: #170537;
+	z-index: -2;
+}
+.header-bg {
+	top: -30rem;
+}
+.footer-bg {
 	bottom: -30rem;
-	left: -7rem;
 }
 
 .headerAnimation {
 	animation: header 1s forwards ease;
-	animation-delay: 0.5s;
+	animation-delay: 0.3s;
+	backface-visibility: hidden;
 }
 .footerAnimation {
 	animation: footer 1s forwards ease;
-	animation-delay: 0.5s;
+	animation-delay: 0.3s;
+	backface-visibility: hidden;
 }
 
 .socialAnimation {
@@ -386,21 +380,24 @@ nav {
 
 @keyframes header {
 	from {
-		transform: rotate(0deg);
+		// transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(11deg);
-		top: -19rem;
+		// transform: rotate(11deg);
+		top: 0;
+		height: 51%;
+		// transform: translateY(50%);
 	}
 }
 
 @keyframes footer {
 	from {
-		transform: rotate(0deg);
+		// transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(11deg);
-		bottom: -22rem;
+		// transform: rotate(11deg);
+		bottom: 0;
+		height: 51%;
 	}
 }
 

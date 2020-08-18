@@ -219,7 +219,7 @@ section {
 	background-color: #2f1238;
 	background-size: cover;
 	background-repeat: no-repeat;
-	// transition: all 0.1s linear;
+	// transition: all 0.4s ease-out;
 }
 
 .second-section::after {
@@ -239,9 +239,8 @@ section {
 	background-color: #190b44;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	// background-attachment: fixed;
 	background-position-y: -20px;
-	// opacity: 0.1;
+
 	padding-bottom: 10em;
 }
 
@@ -317,13 +316,13 @@ section {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 	.second-section {
-		transition: all 1s ease;
+		transition: all 0.4s ease-out;
 	}
-	// .third-section {
-	// 	transition: all 1s ease;
-	// }
+	.third-section {
+		transition: all 0.4s ease-out;
+	}
 
 	.wave {
 		width: 800px;
