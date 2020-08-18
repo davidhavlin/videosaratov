@@ -40,7 +40,7 @@
 					data-lax-bg-pos-y_large="3600 1000, 700 0"
 					data-lax-bg-pos-y_medium="3600 800, 700 0"
 					data-lax-bg-pos-y_small="3600 1500, 700 0"
-					data-lax-bg-pos-y_ultrasmall="3600 1800, 700 0"
+					data-lax-bg-pos-y_ultrasmall="5600 1000, 700 0"
 				>
 					<home-box-third ref="third" />
 					<svg viewBox="0 0 1440 320" class="third-wave">
@@ -321,7 +321,7 @@ section {
 		transition: all 0.4s ease-out;
 	}
 	.third-section {
-		transition: all 0.4s ease-out;
+		background-image: none;
 	}
 
 	.wave {

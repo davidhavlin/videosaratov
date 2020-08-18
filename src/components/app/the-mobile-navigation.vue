@@ -379,23 +379,14 @@ nav {
 }
 
 @keyframes header {
-	from {
-		// transform: rotate(0deg);
-	}
 	to {
-		// transform: rotate(11deg);
 		top: 0;
 		height: 51%;
-		// transform: translateY(50%);
 	}
 }
 
 @keyframes footer {
-	from {
-		// transform: rotate(0deg);
-	}
 	to {
-		// transform: rotate(11deg);
 		bottom: 0;
 		height: 51%;
 	}
