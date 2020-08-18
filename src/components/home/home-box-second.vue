@@ -1,9 +1,7 @@
 <template>
-	<aside class="content"
-		   ref="content">
+	<aside class="content" ref="content">
 		<div class="content-img">
-			<img src="@/assets/img/content.jpg"
-				 alt />
+			<img src="@/assets/img/content.jpg" alt />
 		</div>
 		<div class="content-title">
 			<h1>
@@ -18,9 +16,7 @@
 				<strong>Vstúpte priamo do hry!</strong>
 			</p>
 
-			<a class="btn btn-home"
-			   @click.prevent="showInfo()"
-			   rel="noopener">Objednať sa</a>
+			<a class="btn btn-home" @click.prevent="showInfo()" rel="noopener">Objednať sa</a>
 			<transition name="modal">
 				<the-info v-if="info" />
 			</transition>
@@ -104,11 +100,9 @@ export default {
 		max-width: 20em;
 		text-align: right;
 		z-index: 11;
-
 		grid-column: 1 / 4;
 		grid-row: 3 / 6;
-
-		background: linear-gradient(12deg, #1079fb 0%, #1079fb 100%);
+		background: linear-gradient(12deg, #4411ad 0%, #1189f8 100%);
 		box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
 		padding: 1em;
 		border-radius: 1em;
@@ -140,14 +134,14 @@ export default {
 
 .btn-home {
 	text-align: right;
-	background: #0e60c6;
+	background: #2f1498;
 	box-shadow: 0px 0px 10px 0px #0e60c65e;
 	transition: all 0.3s cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
 .btn-home:hover,
 .btn-home:focus {
 	transform: scale(1.1);
-	box-shadow: 5px 6px 1px -1px rgb(13 65 130);
+	box-shadow: 5px 6px 1px -1px #080f2229;
 }
 
 @media (max-width: 810px) {

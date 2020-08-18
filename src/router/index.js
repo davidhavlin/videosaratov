@@ -70,6 +70,17 @@ const router = new VueRouter({
 		// } else {
 		// 	return { x: 0, y: 0 }
 		// }
+
+		if (from.name === 'GameSinglePage' && to.name === 'Hry') {
+			return savedPosition
+		}
+		if (
+			to.name === 'Cennik' ||
+			to.name === 'Kontakt' ||
+			to.name === 'Hry'
+		) {
+			return { x: 0, y: 0 }
+		}
 		if (savedPosition) {
 			return savedPosition
 		} else {

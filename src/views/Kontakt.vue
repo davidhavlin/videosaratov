@@ -82,7 +82,6 @@ section {
 	width: 100%;
 	min-height: 60em;
 	padding: 2em;
-	padding-bottom: 4em;
 	background: #1b083b;
 	z-index: 10;
 }

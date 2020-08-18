@@ -65,6 +65,7 @@
 			data-lax-translate-y_small="-500 -6, 1000 -80"
 			data-lax-rotate="-1000 20, 1000 0"
 			data-lax-anchor="self"
+			data-lax-optimize
 		>
 			<img src="@/assets/img/htc.webp" alt />
 		</div>
@@ -222,7 +223,7 @@ export default {
 .content-img-4 {
 	border-radius: 1em;
 	overflow: hidden;
-	box-shadow: -5px 5px 0px 0px #2448fa, -11px 11px 22px 0px #4046c940;
+	box-shadow: -5px 5px 0px 0px #1079fa, -11px 11px 22px 0px #4046c940;
 	transform: rotate(-5deg) translateX(30px);
 	grid-area: img4;
 	position: relative;

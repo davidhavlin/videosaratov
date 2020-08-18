@@ -87,6 +87,9 @@ export default {
 	},
 
 	mounted() {
+		if (window.innerWidth < 700) {
+			return
+		}
 		this.content.addEventListener('mouseenter', this.onMouseEnterHandler)
 		this.content.addEventListener('mouseleave', this.onMouseLeaveHandler)
 		this.content.addEventListener('mousemove', this.onMouseMoveHandler)
