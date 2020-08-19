@@ -1,18 +1,21 @@
 <template>
 	<div class="game-gallery">
 		<transition name="loader">
-			<the-loader class="loading" v-show="loader" />
+			<the-loader class="loading"
+						v-show="loader" />
 		</transition>
-		<div v-for="game in games" :key="game.id" class="game" :class="game.category">
-			<router-link
-				:to="{
+		<div v-for="game in games"
+			 :key="game.id"
+			 class="game"
+			 :class="game.category">
+			<router-link :to="{
 					name: 'GameSinglePage',
-					params: { slug: game.slug },
-                    hash: '#game-info'
-				}"
-			>
+					params: { slug: game.slug }
+				}">
 				<div class="category">{{ categorize(game.category) }}</div>
-				<img :src="game.img" alt="Image of Game" loading="lazy" />
+				<img :src="game.img"
+					 alt="Image of Game"
+					 loading="lazy" />
 				<div class="under-image">
 					<h4 class="title">{{ game.title }}</h4>
 					<p class="description">{{ game.desc }}</p>
@@ -135,7 +138,7 @@ a {
 	position: relative;
 	border-radius: 0.5em;
 	overflow: hidden;
-	background: #130629;
+	background: #291354;
 	transition: all 0.3s ease;
 }
 

@@ -24,7 +24,8 @@
 					amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua.
 				</p>
-				<a href="#" class="web">Videosaratov web stránka</a>
+				<a href="#"
+				   class="web">Videosaratov web stránka</a>
 			</fieldset>
 			<fieldset>
 				<legend style="padding: 1em 1em ">
@@ -134,7 +135,7 @@ legend {
 p {
 	margin: 0;
 	margin-top: -2em;
-	color: #775fff;
+	color: #bfb3ff;
 }
 
 h2 {
@@ -156,7 +157,7 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #775fff;
+	color: #bfb3ff;
 }
 
 a:hover {

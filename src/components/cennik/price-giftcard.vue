@@ -115,7 +115,7 @@
 						@click="checkResult()">Submit</button>
 
 				<button class="btn-cancel"
-						@click="exitModal()">Cancel</button>
+						@click.prevent="exitModal()">Cancel</button>
 			</div>
 			<div class="final-price">
 				Cena spolu:

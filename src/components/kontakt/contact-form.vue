@@ -5,31 +5,40 @@
 			<div>
 				<label for="form-name">Name</label>
 
-				<input id="form-name" class="input" type="text" required v-model="name" />
+				<input id="form-name"
+					   class="input"
+					   type="text"
+					   required
+					   v-model="name" />
 			</div>
 
 			<div>
 				<label for="form-email">Email</label>
 
-				<input value="@" id="form-email" class="input" type="email" required v-model="email" />
+				<input value="@"
+					   id="form-email"
+					   class="input"
+					   type="email"
+					   required
+					   v-model="email" />
 			</div>
-			<textarea
-				placeholder="Vaša správa.."
-				class="input"
-				id
-				cols="30"
-				rows="10"
-				maxlength="100%"
-				v-model="textarea"
-				required
-			></textarea>
+			<textarea placeholder="Vaša správa.."
+					  class="input"
+					  id
+					  cols="30"
+					  rows="10"
+					  maxlength="100%"
+					  v-model="textarea"
+					  required></textarea>
 			<div>
 				<button>Odoslať</button>
 			</div>
 		</form>
 		<transition name="email">
-			<div class="img-container" v-show="emailSent">
-				<img src="@/assets/img/undraw_Mail.svg" alt />
+			<div class="img-container"
+				 v-show="emailSent">
+				<img src="@/assets/img/undraw_Mail.svg"
+					 alt />
 				<p class="email-sent">Email úspešne odoslaný</p>
 			</div>
 		</transition>
@@ -80,7 +89,7 @@ export default {
 .formular {
 	position: relative;
 	width: 600px;
-	margin: 8em auto;
+	margin: 3em auto;
 
 	h2 {
 		text-align: left;
@@ -192,10 +201,6 @@ form {
 
 		textarea {
 			grid-column: span 1;
-		}
-
-		button {
-			width: 100%;
 		}
 	}
 }

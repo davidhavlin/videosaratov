@@ -89,7 +89,7 @@ export default {
 		width: 43%;
 		border-radius: 1em;
 		overflow: hidden;
-		box-shadow: -5px 5px 0 0 #fc1269,
+		box-shadow: -5px 5px 0 0 #5010e2,
 			-11px 11px 22px 0 rgba(47, 137, 246, 0.14);
 		transform: rotate(-4deg) translate(22px, -82px);
 		z-index: 10;

@@ -1,12 +1,13 @@
 <template>
-	<transition
-		name="elevator"
-		enter-active-class="animate__animated animate__bounceIn"
-		leave-active-class="animate__animated animate__bounceOut"
-	>
-		<div class="elevator" v-show="showElevator" @click="jumpTo()">
+	<transition name="elevator"
+				enter-active-class="animate__animated animate__bounceIn"
+				leave-active-class="animate__animated animate__bounceOut">
+		<div class="elevator"
+			 v-show="showElevator"
+			 @click="jumpTo()">
 			<div class="fill"></div>
-			<i style="display: block" class="fas fa-chevron-circle-up"></i>
+			<i style="display: block"
+			   class="fas fa-chevron-circle-up"></i>
 		</div>
 	</transition>
 </template>
@@ -32,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_colors.scss';
 .elevator {
-	color: #ea093e;
+	color: #fc1269;
 	z-index: 99;
 	position: fixed;
 	font-size: 3.6em;

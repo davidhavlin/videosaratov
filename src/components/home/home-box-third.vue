@@ -6,7 +6,7 @@
 			 data-lax-translate-y_large="-1000 0, 1000 -150"
 			 data-lax-translate-y_medium="-300 -93, 1000 -150"
 			 data-lax-translate-y_small="-300 -93, 1000 -150"
-			 data-lax-translate-y_ultrasmall="-1000 -93, 1000 -150"
+			 data-lax-translate-y_ultrasmall="-500 -90, 1000 -150"
 			 data-lax-rotate="-1000 -20, vh 0"
 			 data-lax-anchor="self">
 			<img src="@/assets/img/vrvr.webp"

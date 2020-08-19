@@ -1,36 +1,47 @@
 <template>
-	<fieldset ref="gallery" class="animate__animated">
-		<legend style="padding: 1em 1em " id="gallery">
+	<fieldset ref="gallery"
+			  class="animate__animated">
+		<legend style="padding: 1em 1em "
+				id="gallery">
 			<h1>Galéria priestorov</h1>
 		</legend>
 
 		<div class="gallery">
 			<a :href="require('@/assets/img/photos/01.jpg')">
-				<img src="@/assets/img/photos/01s.webp" alt="First image" />
+				<img src="@/assets/img/photos/01s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/02.jpg')">
-				<img src="@/assets/img/photos/02s.webp" alt="Second image" />
+				<img src="@/assets/img/photos/02s.webp"
+					 alt="Second image" />
 			</a>
 			<a :href="require('@/assets/img/photos/03.jpg')">
-				<img src="@/assets/img/photos/03s.webp" alt="First image" />
+				<img src="@/assets/img/photos/03s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/05.jpg')">
-				<img src="@/assets/img/photos/05s.webp" alt="First image" />
+				<img src="@/assets/img/photos/05s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/06.jpg')">
-				<img src="@/assets/img/photos/06s.webp" alt="First image" />
+				<img src="@/assets/img/photos/06s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/07.jpg')">
-				<img src="@/assets/img/photos/07s.webp" alt="First image" />
+				<img src="@/assets/img/photos/07s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/08.jpg')">
-				<img src="@/assets/img/photos/08s.webp" alt="First image" />
+				<img src="@/assets/img/photos/08s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/09.jpg')">
-				<img src="@/assets/img/photos/09s.webp" alt="First image" />
+				<img src="@/assets/img/photos/09s.webp"
+					 alt="First image" />
 			</a>
 			<a :href="require('@/assets/img/photos/10.jpg')">
-				<img src="@/assets/img/photos/10s.webp" alt="First image" />
+				<img src="@/assets/img/photos/10s.webp"
+					 alt="First image" />
 			</a>
 		</div>
 	</fieldset>
@@ -71,7 +82,7 @@ fieldset {
 }
 
 h1 {
-	color: #5b0bff;
+	color: #ffffff;
 	margin: 0;
 	font-size: 2em;
 }
