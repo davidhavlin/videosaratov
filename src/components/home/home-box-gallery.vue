@@ -92,7 +92,7 @@ p {
 
 .gallery {
 	position: relative;
-	max-width: 800px;
+	max-width: 700px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-rows: 150px;
