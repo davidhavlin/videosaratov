@@ -89,7 +89,7 @@ export default {}
 	margin-bottom: 0.3em;
 	font-size: 1.7em;
 	transition: all 0.3s ease;
-	color: #775fff;
+	color: #bfb3ff;
 }
 
 .web {
@@ -147,10 +147,14 @@ h2 {
 		margin-top: 8em;
 		color: #ffffff;
 		font-weight: 500;
+
+		strong {
+			color: #fc1269;
+		}
 	}
 
 	p {
-		color: #775fff;
+		color: #bfb3ff;
 		margin-top: -0.8rem;
 	}
 }
