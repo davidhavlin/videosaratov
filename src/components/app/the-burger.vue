@@ -46,7 +46,7 @@ export default {
 }
 .burger-bg {
 	position: fixed;
-	background: #250454;
+	background: #35069f;
 	width: 65px;
 	border-radius: 50%;
 	z-index: 20;
