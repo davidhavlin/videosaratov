@@ -54,6 +54,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	z-index: -1;
+	margin-left: -1rem;
 }
 
 @media (max-width: 660px) {

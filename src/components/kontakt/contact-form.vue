@@ -124,7 +124,7 @@ form {
 		position: relative;
 	}
 	label {
-		color: #5b0bff;
+		color: #9889db;
 		display: block;
 		margin-bottom: 0.5rem;
 	}
@@ -154,7 +154,7 @@ form {
 		}
 	}
 	::placeholder {
-		color: #629ec989;
+		color: #9889db;
 	}
 
 	button {

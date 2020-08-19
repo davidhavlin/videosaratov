@@ -51,7 +51,7 @@ export default {}
 <style lang="scss" scoped>
 h1 {
 	margin-top: 0;
-	color: #0b87dc;
+	color: #ffffff;
 }
 .table {
 	// margin: 2em auto;
@@ -75,7 +75,7 @@ th {
 }
 th {
 	color: #fff;
-	background: #170732;
+	background: #451ea7;
 }
 tr {
 	border: 2px dashed rgba(84, 89, 193, 0.1);

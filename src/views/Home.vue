@@ -23,7 +23,7 @@
 					</svg>
 				</section>
 
-				<section class="second-section" ref="parallax2" data-lax-bg-pos-y="1400 120, 700 0">
+				<section class="second-section" ref="parallax2" data-lax-bg-pos-y="1700 120, 700 0">
 					<home-box-second />
 					<svg class="second-wave" viewBox="0 0 1440 320">
 						<path

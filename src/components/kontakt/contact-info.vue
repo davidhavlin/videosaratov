@@ -30,7 +30,7 @@ export default {}
 
 <style lang="scss" scoped>
 h3 {
-	color: #5b0bff;
+	color: #fffff4;
 	margin: 0;
 }
 

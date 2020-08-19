@@ -7,7 +7,7 @@
 			data-lax-translate-y_large="-1000 0, 1000 -150"
 			data-lax-translate-y_medium="-300 -93, 1000 -150"
 			data-lax-translate-y_small="-300 -93, 1000 -150"
-			data-lax-translate-y_ultrasmall="-300 -93, 1000 -150"
+			data-lax-translate-y_ultrasmall="-1000 -93, 1000 -150"
 			data-lax-rotate="-1000 -20, vh 0"
 			data-lax-anchor="self"
 		>
@@ -32,10 +32,10 @@
 		<div
 			class="content-img-2"
 			ref="controllers"
-			data-lax-translate-y_large="-1000 180, 1000 -150"
+			data-lax-translate-y_large="-1000 10, 1000 -150"
 			data-lax-translate-y_medium="-1000 220, 1000 80"
 			data-lax-translate-y_small="-1000 220, 1000 -40"
-			data-lax-rotate_large="-1000 -25, 600 0"
+			data-lax-rotate_large="-800 15, 600 0"
 			data-lax-rotate_medium="-1000 30, 600 0"
 			data-lax-rotate_small="-1000 62, 600 40"
 			data-lax-anchor="self"
@@ -162,7 +162,7 @@ export default {
 				this.$refs.section_3,
 				this.$refs.popcorn
 			],
-			once: true,
+			once: false,
 			threshold: 0.3
 		})
 	},

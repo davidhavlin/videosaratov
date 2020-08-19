@@ -144,7 +144,7 @@ h2 {
 .podpis {
 	h3 {
 		margin-top: 8em;
-		color: #beadf3;
+		color: #ffffff;
 		font-weight: 500;
 	}
 

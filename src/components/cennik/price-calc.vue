@@ -1,11 +1,8 @@
 <template>
 	<div class="price-calculator">
 		<transition name="fadeModal">
-			<div class="result"
-				 v-if="resultShow">
-				<a class="result-exit"
-				   href="#"
-				   @click.prevent="resultShow = !resultShow">
+			<div class="result" v-if="resultShow">
+				<a class="result-exit" href="#" @click.prevent="resultShow = !resultShow">
 					<i class="far fa-times-circle"></i>
 				</a>
 				<div>
@@ -18,58 +15,63 @@
 		<form id="time-form">
 			<label for="time">Ako dlho chceš hrať? (v minutách)</label>
 			<div class="inputTime">
-				<span class="spanTime"
-					  v-if="inputTime > 240">Maximálne 4 hodiny!</span>
-				<span class="spanTime"
-					  v-else-if="
+				<span class="spanTime" v-if="inputTime > 240">Maximálne 4 hodiny!</span>
+				<span
+					class="spanTime"
+					v-else-if="
 					(inputTime < 5 && !inputTime == '') || inputTime == 0
-				">Minimálne 5 minút!</span>
+				"
+				>Minimálne 5 minút!</span>
 
-				<input ref="inputTime"
-					   id="time"
-					   type="number"
-					   min="5"
-					   max="240"
-					   v-model.number="inputTime"
-					   :class="{bordered: errorTime}" />
+				<input
+					ref="inputTime"
+					id="time"
+					type="number"
+					min="5"
+					max="240"
+					v-model.number="inputTime"
+					:class="{bordered: errorTime}"
+				/>
 			</div>
 
 			<label for="people">Kolkatí chcete hrať?</label>
 			<div class="inputPeople">
-				<span class="spanPeople"
-					  v-if="inputPeople > 10">Maximálne 10 osôb!</span>
-				<span class="spanPeople"
-					  v-else-if="
+				<span class="spanPeople" v-if="inputPeople > 10">Maximálne 10 osôb!</span>
+				<span
+					class="spanPeople"
+					v-else-if="
 						(inputPeople < 1 && !inputPeople == '') ||
 							inputPeople == 0
-					">Minimálne 1 osoba!</span>
+					"
+				>Minimálne 1 osoba!</span>
 
-				<input ref="inputPeople"
-					   id="people"
-					   type="number"
-					   min="1"
-					   max="10"
-					   v-model.number="inputPeople"
-					   :class="{bordered: errorPeople}" />
+				<input
+					ref="inputPeople"
+					id="people"
+					type="number"
+					min="1"
+					max="10"
+					v-model.number="inputPeople"
+					:class="{bordered: errorPeople}"
+				/>
 			</div>
 
 			<label for="card">Máš vernostnú kartu?</label>
-			<select class="selectCard"
-					ref="selectCard"
-					id="card"
-					v-model="inputCard"
-					:class="{ bordered: error }">
+			<select
+				class="selectCard"
+				ref="selectCard"
+				id="card"
+				v-model="inputCard"
+				:class="{ bordered: error }"
+			>
 				<option value="def">Vyber z možností..</option>
 				<option value="1">Áno</option>
 				<option value="0">Nie</option>
 			</select>
 
 			<div class="price-buttons">
-				<button class="calculate-btn"
-						@click.prevent="calculatePrice()">Vypočítať</button>
-				<input class="reset-btn"
-					   type="reset"
-					   @click.prevent="resetForm()" />
+				<button class="calculate-btn" @click.prevent="calculatePrice()">Vypočítať</button>
+				<input class="reset-btn" type="reset" @click.prevent="resetForm()" />
 			</div>
 		</form>
 	</div>
@@ -156,7 +158,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
 	margin-top: 0;
-	color: #0b87dc;
+	color: #ffffff;
 }
 span {
 	color: #bf1052;
@@ -205,8 +207,8 @@ option {
 	// margin: 2em;
 	border-radius: 0.5em;
 	overflow: hidden;
-	background: #170732;
-	color: #b4a6ff;
+	background: #451ea7;
+	color: #ffffff;
 	transition: all 1s ease;
 	box-shadow: 1px 1px 21px 3px #1707329e;
 }
@@ -236,7 +238,7 @@ select {
 	border-radius: 0.5em;
 	outline: none;
 	transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-	background: #1c093c;
+	background: #511dd4;
 }
 input.bordered,
 select.bordered {
@@ -250,7 +252,7 @@ select.bordered {
 .calculate-btn,
 .reset-btn {
 	color: #fff;
-	background: #1c093c;
+	background: #451ea7;
 	border: none;
 	padding: 1em 1.5em;
 	font-family: inherit;
@@ -261,7 +263,7 @@ select.bordered {
 .calculate-btn {
 	width: 60%;
 	margin-right: 1em;
-	background-color: #0b87dc;
+	background-color: #1b083b;
 }
 .reset-btn {
 	width: 40%;

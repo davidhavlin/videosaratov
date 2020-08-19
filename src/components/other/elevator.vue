@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_colors.scss';
 .elevator {
-	color: #0e061c;
+	color: #ea093e;
 	z-index: 99;
 	position: fixed;
 	font-size: 3.6em;
@@ -50,10 +50,10 @@ export default {
 	position: absolute;
 	top: 9px;
 	transform: translateX(-50%);
-	left: 48%;
+	left: 41%;
 	width: 44px;
 	height: 42px;
-	background: #220958;
+	background: #210854;
 	z-index: -1;
 	border-radius: 50%;
 	box-shadow: -4px -1px 14px 7px #0f061d42;

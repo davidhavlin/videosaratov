@@ -127,7 +127,7 @@ a {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 10px;
+	gap: 20px;
 	transition: all 1s ease-in;
 }
 
@@ -169,7 +169,7 @@ img {
 	.description {
 		margin: 0;
 		text-align: left;
-		color: #9e73ff;
+		color: #d1bcfe;
 		text-decoration: none;
 	}
 }
