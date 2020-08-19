@@ -38,7 +38,6 @@
 			data-lax-rotate_large="-1000 -25, 600 0"
 			data-lax-rotate_medium="-1000 30, 600 0"
 			data-lax-rotate_small="-1000 62, 600 40"
-			data-lax-opacity="-500 0, -400 1, 400 1, 600 0"
 			data-lax-anchor="self"
 		>
 			<img src="@/assets/img/ovladace.webp" alt />

@@ -1,12 +1,9 @@
 <template>
-	<aside class="content" ref="content">
-		<div class="content-img">
-			<img src="@/assets/img/content.jpg" alt />
-		</div>
+	<aside class="aside-content" ref="content">
 		<div class="content-title">
 			<h1>
 				Nová dimenzia
-				<span>zábavy</span>
+				zábavy
 			</h1>
 			<p>
 				Zažite virtuálne cestovanie po horách, prechádzku v podmorskom
@@ -20,6 +17,10 @@
 			<transition name="modal">
 				<the-info v-if="info" />
 			</transition>
+		</div>
+
+		<div class="content-img">
+			<img src="@/assets/img/content.jpg" alt />
 		</div>
 	</aside>
 </template>
@@ -74,20 +75,19 @@ export default {
 	transform: translateY(20px) scale(0.9);
 }
 
-.content {
+.aside-content {
+	display: flex;
 	position: relative;
-	grid-template-rows: repeat(6, 1fr);
-	justify-items: center;
+	justify-content: center;
+	align-items: center;
 
 	.content-img {
-		width: 90%;
-		grid-column: 3 / 7;
-		grid-row: 2 / 5;
+		width: 43%;
 		border-radius: 1em;
 		overflow: hidden;
 		box-shadow: -5px 5px 0px 0px #1079fb,
-			-11px 11px 22px 0px rgb(47 137 246 / 14%);
-		transform: rotate(-5deg);
+			-11px 11px 22px 0px rgba(47, 137, 246, 0.14);
+		transform: rotate(-4deg) translate(22px, -82px);
 		z-index: 10;
 	}
 	.content-img img {
@@ -100,27 +100,21 @@ export default {
 		max-width: 20em;
 		text-align: right;
 		z-index: 11;
-		grid-column: 1 / 4;
-		grid-row: 3 / 6;
+		transform: translate(5px, 41px);
 		background: linear-gradient(12deg, #00060c 0%, #060d20 100%);
 		box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
 		padding: 1em;
+		margin-right: 2rem;
 		border-radius: 1em;
 
 		h1 {
-			font-size: 2.4em;
+			text-align: left;
+			font-size: 2em;
 			position: absolute;
-			top: 5rem;
-			left: 3.3em;
+			top: -5.7rem;
+			left: 1rem;
 			color: #ffffff;
-			transform: rotate(-5deg);
-			margin: 0;
-
-			span {
-				text-align: left;
-				display: block;
-				// color: #f30438;
-			}
+			margin: 0 0 1rem 0;
 		}
 
 		p {
@@ -144,68 +138,46 @@ export default {
 	box-shadow: 5px 6px 1px -1px #080f2229;
 }
 
-@media (max-width: 810px) {
-	.content {
-		display: flex;
+@media (max-width: 720px) {
+	.aside-content {
+		padding: 10rem 0 20rem 0;
 		flex-direction: column;
-		margin: 7rem 1rem 11rem 1rem;
 
 		.content-img {
-			max-width: 500px;
-			align-self: flex-start;
+			width: 60%;
+			order: 1;
+			transform: rotate(-4deg);
 		}
 
 		.content-title {
-			align-self: flex-end;
-			margin-top: -4.1rem;
+			margin-right: 0;
+
+			background: none;
+			box-shadow: none;
+			order: 2;
 
 			h1 {
-				font-size: 2.4em;
-				position: absolute;
-				top: -3.2rem;
-				left: 0;
-				text-align: left;
-				line-height: 1.1;
-				margin: 0 0 1rem 0;
-
-				span {
-					display: inline;
-				}
+				position: static;
 			}
 		}
 	}
 }
 
 @media (max-width: 480px) {
-	.content {
-		display: flex;
-		flex-direction: column;
-		margin: 7rem 1rem 11rem 1rem;
-
+	.aside-content {
 		.content-img {
-			max-width: 500px;
-			align-self: center;
+			width: 90%;
 			z-index: 13;
+			transform: rotate(-4deg);
+			order: 1;
 		}
 
 		.content-title {
-			align-self: center;
 			margin-top: -4.1rem;
-			max-width: 280px;
+			order: 2;
 
 			h1 {
-				font-size: 2.1em;
-				position: static;
-				top: 0;
-				left: 0;
-				text-align: left;
-				line-height: 1.1;
-				margin: 5rem 0 1rem 0;
-				transform: none;
-
-				span {
-					display: inline;
-				}
+				margin: 3.6rem 0 1rem 0;
 			}
 		}
 	}
