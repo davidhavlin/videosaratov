@@ -35,7 +35,7 @@ export default {
 	width: 80px;
 	display: block;
 	font-size: 2em;
-	color: #540bea;
+	color: #ffffff;
 	padding: 0.8rem;
 	cursor: pointer;
 	transition: transform 0.5s ease;
@@ -46,7 +46,7 @@ export default {
 }
 .burger-bg {
 	position: fixed;
-	background: #170732;
+	background: #250454;
 	width: 65px;
 	border-radius: 50%;
 	z-index: 20;
@@ -55,7 +55,6 @@ export default {
 	right: 0.4rem;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0px 0px 7px 5px #17073233;
 }
 
 [data-scroll-dir-y='1'] .burger-bg {

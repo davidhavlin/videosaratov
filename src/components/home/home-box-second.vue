@@ -108,11 +108,11 @@ export default {
 		border-radius: 1em;
 
 		h1 {
-			font-size: 3em;
+			font-size: 2.4em;
 			position: absolute;
-			top: 4.5rem;
-			left: 1.9em;
-			color: #0f0d22;
+			top: 5rem;
+			left: 3.3em;
+			color: #ffffff;
 			transform: rotate(-5deg);
 			margin: 0;
 

@@ -138,7 +138,7 @@ nav {
 	width: 100%;
 	text-align: center;
 	height: 75px;
-	background: #170732;
+	background: #250454;
 	z-index: 10000;
 }
 .nav-logo {

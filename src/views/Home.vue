@@ -225,7 +225,7 @@ section {
 .second-section::after {
 	content: '';
 	// background: linear-gradient(0deg, rgb(76, 0, 16) 0%, #ff0038 100%);
-	background: linear-gradient(0deg, #0a0f23 0%, #f30d31 100%);
+	background: linear-gradient(0deg, #1a0047 0%, #22005b 100%);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -271,7 +271,7 @@ section {
 	bottom: -40px;
 	z-index: -3;
 	path {
-		fill: #ca0e32;
+		fill: #250454;
 		// fill: #363cce;
 	}
 }
