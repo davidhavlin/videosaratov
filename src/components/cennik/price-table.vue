@@ -75,7 +75,7 @@ th {
 }
 th {
 	color: #fff;
-	background: #451ea7;
+	background: #570de9;
 }
 tr {
 	border: 2px dashed rgba(84, 89, 193, 0.1);

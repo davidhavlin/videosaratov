@@ -1,11 +1,17 @@
 <template>
 	<div>
-		<form @keyup.prevent="debouncedSearch()" onsubmit="return false">
-			<div @click="searchInput.focus()" class="icon">
+		<form @keyup.prevent="debouncedSearch()"
+			  onsubmit="return false">
+			<div @click="searchInput.focus()"
+				 class="icon">
 				<i class="fas fa-search"></i>
 			</div>
 
-			<input id="search-input" ref="search" type="text" placeholder="Hľadaj hru.." v-model="search" />
+			<input id="search-input"
+				   ref="search"
+				   type="text"
+				   placeholder="Hľadaj hru.."
+				   v-model="search" />
 		</form>
 	</div>
 </template>
@@ -103,7 +109,7 @@ input {
 	margin-left: 0.2em;
 }
 ::placeholder {
-	color: #570de9;
+	color: #ffffff;
 }
 
 input:focus {

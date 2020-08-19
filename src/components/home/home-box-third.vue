@@ -1,50 +1,52 @@
 <template>
 	<aside class="content">
 		<!-- obrazok KOCKA  -->
-		<div
-			class="content-img-1"
-			ref="vrimage"
-			data-lax-translate-y_large="-1000 0, 1000 -150"
-			data-lax-translate-y_medium="-300 -93, 1000 -150"
-			data-lax-translate-y_small="-300 -93, 1000 -150"
-			data-lax-translate-y_ultrasmall="-1000 -93, 1000 -150"
-			data-lax-rotate="-1000 -20, vh 0"
-			data-lax-anchor="self"
-		>
-			<img src="@/assets/img/vrvr.webp" alt />
+		<div class="content-img-1"
+			 ref="vrimage"
+			 data-lax-translate-y_large="-1000 0, 1000 -150"
+			 data-lax-translate-y_medium="-300 -93, 1000 -150"
+			 data-lax-translate-y_small="-300 -93, 1000 -150"
+			 data-lax-translate-y_ultrasmall="-1000 -93, 1000 -150"
+			 data-lax-rotate="-1000 -20, vh 0"
+			 data-lax-anchor="self">
+			<img src="@/assets/img/vrvr.webp"
+				 alt />
 		</div>
 
 		<!-- HORNA SEKCIA s obrazkom a popisom -->
-		<section ref="section_1" class="content-title-1 animate__animated">
+		<section ref="section_1"
+				 class="content-title-1 animate__animated">
 			<h1 id="htc-vive">HTC Vive</h1>
 			<p>
 				Súprava HTC Vive obsahuje Headset a 2 ovládače. Ponúka najväčšiu
 				ponuku hier a zážitkov oproti iným systémom.
 			</p>
-			<a class="btn btn-home" @click.prevent="showInfo()">Zistiť viac</a>
+			<a class="btn btn-home"
+			   @click.prevent="showInfo()">Zistiť viac</a>
 			<transition name="modal">
-				<the-info class="info-modal" v-if="info" />
+				<the-info class="info-modal"
+						  v-if="info" />
 			</transition>
 		</section>
 		<!-- **************************** -->
 
 		<!-- obrazok OVLADACE      -->
-		<div
-			class="content-img-2"
-			ref="controllers"
-			data-lax-translate-y_large="-1000 10, 1000 -150"
-			data-lax-translate-y_medium="-1000 220, 1000 80"
-			data-lax-translate-y_small="-1000 220, 1000 -40"
-			data-lax-rotate_large="-800 15, 600 0"
-			data-lax-rotate_medium="-1000 30, 600 0"
-			data-lax-rotate_small="-1000 62, 600 40"
-			data-lax-anchor="self"
-		>
-			<img src="@/assets/img/ovladace.webp" alt />
+		<div class="content-img-2"
+			 ref="controllers"
+			 data-lax-translate-y_large="-1000 10, 1000 -150"
+			 data-lax-translate-y_medium="-1000 220, 1000 80"
+			 data-lax-translate-y_small="-1000 220, 1000 -40"
+			 data-lax-rotate_large="-800 15, 600 0"
+			 data-lax-rotate_medium="-1000 30, 600 0"
+			 data-lax-rotate_small="-1000 62, 600 40"
+			 data-lax-anchor="self">
+			<img src="@/assets/img/ovladace.webp"
+				 alt />
 		</div>
 
 		<!-- SEKCIA HEADSET -->
-		<section ref="section_2" class="content-title-2 animate__animated">
+		<section ref="section_2"
+				 class="content-title-2 animate__animated">
 			<h1>Headset</h1>
 			<p>
 				Pri hre sa pohybujete v priestore cca 3 x 3 m, na hlave máte
@@ -56,21 +58,21 @@
 		<!-- ************* -->
 
 		<!-- obrazok HEADSET -->
-		<div
-			class="content-img-3"
-			ref="vive"
-			data-lax-translate-y_large="-1000 300, 1000 -100"
-			data-lax-translate-y_medium="-1000 -26, 1000 -100"
-			data-lax-translate-y_small="-500 -6, 1000 -80"
-			data-lax-rotate="-1000 20, 1000 0"
-			data-lax-anchor="self"
-			data-lax-optimize
-		>
-			<img src="@/assets/img/htc.webp" alt />
+		<div class="content-img-3"
+			 ref="vive"
+			 data-lax-translate-y_large="-1000 300, 1000 -100"
+			 data-lax-translate-y_medium="-1000 -26, 1000 -100"
+			 data-lax-translate-y_small="-500 -6, 1000 -80"
+			 data-lax-rotate="-1000 20, 1000 0"
+			 data-lax-anchor="self"
+			 data-lax-optimize>
+			<img src="@/assets/img/htc.webp"
+				 alt />
 		</div>
 
 		<!-- SEKCIA CONTROLLERS -->
-		<section class="content-title-3 animate__animated" ref="section_3">
+		<section class="content-title-3 animate__animated"
+				 ref="section_3">
 			<h1>Controllers</h1>
 			<p>
 				Hrá 1 hráč a jeho priatelia môžu sledovať hru na TV obrazovke.
@@ -84,7 +86,8 @@
 		<!-- ************************ -->
 
 		<!-- POSLEDNA SEKCIA -->
-		<section class="content-title-4 animate__animated" ref="section_4">
+		<section class="content-title-4 animate__animated"
+				 ref="section_4">
 			<h1>Info</h1>
 			<p>
 				Použitie VR môže pre niekoho znamenať psychickú záťaž.
@@ -97,20 +100,19 @@
 		</section>
 		<!-- ******************* -->
 
-		<div
-			class="content-img-4 lax"
-			ref="popcorn"
-			data-lax-translate-y_large="-1000 80, 1000 -100"
-			data-lax-translate-y_medium="-300 80, 1200 -100"
-			data-lax-translate-y_small="-300 80, 1200 -25"
-			data-lax-translate-y_ultrasmall="-300 40, 1200 -60"
-			data-lax-rotate_large="-1000 -10, 1000 -5"
-			data-lax-rotate_medium="-1000 13, 1000 -5"
-			data-lax-rotate_small="-1000 13, 1000 -5"
-			data-lax-rotate_ultrasmall="-1000 13, 1000 -5"
-			data-lax-anchor="self"
-		>
-			<img src="@/assets/img/vr.webp" alt />
+		<div class="content-img-4 lax"
+			 ref="popcorn"
+			 data-lax-translate-y_large="-1000 80, 1000 -100"
+			 data-lax-translate-y_medium="-300 80, 1200 -100"
+			 data-lax-translate-y_small="-300 80, 1200 -25"
+			 data-lax-translate-y_ultrasmall="-300 40, 1200 -60"
+			 data-lax-rotate_large="-1000 -10, 1000 -5"
+			 data-lax-rotate_medium="-1000 13, 1000 -5"
+			 data-lax-rotate_small="-1000 13, 1000 -5"
+			 data-lax-rotate_ultrasmall="-1000 13, 1000 -5"
+			 data-lax-anchor="self">
+			<img src="@/assets/img/vr.webp"
+				 alt />
 		</div>
 	</aside>
 </template>
@@ -178,7 +180,7 @@ export default {
 @import '~animate.css/animate.min.css';
 
 [data-scroll] {
-	transition: all 1s;
+	transition: all 1s ease-out;
 }
 [data-scroll='in'] {
 	opacity: 1;

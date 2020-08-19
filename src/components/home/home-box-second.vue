@@ -1,5 +1,6 @@
 <template>
-	<aside class="aside-content" ref="content">
+	<aside class="aside-content"
+		   ref="content">
 		<div class="content-title">
 			<h1>
 				Nová dimenzia
@@ -13,14 +14,17 @@
 				<strong>Vstúpte priamo do hry!</strong>
 			</p>
 
-			<a class="btn btn-home" @click.prevent="showInfo()" rel="noopener">Objednať sa</a>
+			<a class="btn btn-home"
+			   @click.prevent="showInfo()"
+			   rel="noopener">Objednať sa</a>
 			<transition name="modal">
 				<the-info v-if="info" />
 			</transition>
 		</div>
 
 		<div class="content-img">
-			<img src="@/assets/img/content.jpg" alt />
+			<img src="@/assets/img/content.jpg"
+				 alt />
 		</div>
 	</aside>
 </template>
@@ -85,8 +89,8 @@ export default {
 		width: 43%;
 		border-radius: 1em;
 		overflow: hidden;
-		box-shadow: -5px 5px 0px 0px #ffffff,
-			-11px 11px 22px 0px rgba(47, 137, 246, 0.14);
+		box-shadow: -5px 5px 0 0 #fc1269,
+			-11px 11px 22px 0 rgba(47, 137, 246, 0.14);
 		transform: rotate(-4deg) translate(22px, -82px);
 		z-index: 10;
 	}
@@ -101,7 +105,7 @@ export default {
 		text-align: right;
 		z-index: 11;
 		transform: translate(5px, 41px);
-		background: linear-gradient(12deg, #00060c 0%, #060d20 100%);
+		background: linear-gradient(12deg, #100c1d 0%, #08122c 100%);
 		box-shadow: -11px 11px 22px 0px rgba(0, 0, 56, 0.2);
 		padding: 1em;
 		margin-right: 2rem;
